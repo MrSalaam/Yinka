@@ -40,11 +40,8 @@ export function HeroSection() {
 
   return (
     <section className="min-h-screen flex flex-col justify-center py-24 lg:py-0 relative">
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float" />
-      <div
-        className="absolute bottom-40 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: "1s" }}
-      />
+     
+      
 
       <div className="space-y-6 relative mt-20">
         {/* Availability Badge & Location */}

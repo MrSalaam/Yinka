@@ -39,21 +39,8 @@ export function LoadingScreen({ onLoadingComplete }: { onLoadingComplete: () => 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background">
-      {/* Animated background shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div
-          className="absolute -top-20 -left-20 h-64 w-64 rounded-full bg-primary/10 blur-3xl"
-          style={{ animation: "float 4s ease-in-out infinite" }}
-        />
-        <div
-          className="absolute -right-20 -bottom-20 h-80 w-80 rounded-full bg-accent/10 blur-3xl"
-          style={{ animation: "float 5s ease-in-out infinite reverse" }}
-        />
-        <div
-          className="absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-2xl"
-          style={{ animation: "scale-pulse 3s ease-in-out infinite" }}
-        />
-      </div>
+      
+      
 
       <div className="relative z-10 flex flex-col items-center gap-8">
         
