@@ -10,40 +10,38 @@ gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const experiences = [
   {
-    company: "TechCorp",
-    role: "Senior Frontend Engineer",
-    period: "2022 — Present",
+    company: "MIC",
+    role: " Frontend Developer Intern",
+    period: "March - September 2025",
     description: [
-      "Lead development of the company's flagship React application, improving performance by 40%",
-      "Architect and implement component library used by 5+ teams across the organization",
-      "Mentor junior developers and conduct code reviews to maintain code quality",
-      "Collaborate with design team to implement pixel-perfect, accessible interfaces",
+      "Developed a responsive and user-friendly website for the company, using HTML and CSS",
+      "Collaborated with the design team to implement pixel-perfect, accessible interfaces",
+      "Assited my felllow interns and conduct code reviews to maintain code quality",
+      
     ],
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL", "Tailwind"],
+    technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    company: "StartupXYZ",
+    company: "S.A Ayilara",
     role: "Frontend Developer",
-    period: "2020 — 2022",
+    period: "2025",
     description: [
-      "Built and maintained features for a SaaS platform serving 10k+ users",
-      "Implemented real-time collaboration features using WebSockets",
-      "Reduced bundle size by 35% through code splitting and lazy loading",
-      "Developed comprehensive testing strategy increasing code coverage to 85%",
+      "Designed and Developed a portfoolio website for MR Sodiq Ayilara",
+      "Implemented Shadcn UI",
+      "Reduced bundle size by 35% through code splitting and lazy lading",
+      "Responsive across all devices",
     ],
-    technologies: ["React", "Redux", "Node.js", "Jest", "Cypress"],
+    technologies: ["React", "TailwindCSS", "TypeScript", "Shadcn UI"],
   },
   {
-    company: "DesignAgency",
-    role: "Junior Developer",
-    period: "2018 — 2020",
+    company: "Learnille",
+    role: "Frontend Developer",
+    period: "2025 - Present",
     description: [
-      "Developed responsive websites for 20+ clients across various industries",
-      "Collaborated closely with designers to bring creative visions to life",
-      "Introduced modern CSS techniques reducing styling code by 30%",
-      "Built interactive animations and micro-interactions",
+      "Working on admin dashboard",
+      
     ],
-    technologies: ["JavaScript", "HTML/CSS", "GSAP", "WordPress", "Figma"],
+    technologies: ["TypeScript", "React", "Tanstack Query", "Chakra UI", "Figma"],
   },
 ]
 

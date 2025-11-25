@@ -5,7 +5,7 @@
 
 /* Updated to light theme with white and orange color palette */
 :root {
-  --background: oklch(0.99 0.005 90);
+  --background: oklch(1 0 0);
   --foreground: oklch(0.2 0.02 50);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.2 0.02 50);
@@ -41,7 +41,7 @@
 }
 
 .dark {
-  --background: oklch(0.15 0.02 50);
+  --background: oklch(0 0 0);
   --foreground: oklch(0.95 0.01 80);
   --card: oklch(0.18 0.02 50);
   --card-foreground: oklch(0.95 0.01 80);

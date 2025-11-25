@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { cn } from "../lib/utils"
-import { Menu, X } from "lucide-react"
+import { X } from "lucide-react"
+import { MenuIcon } from "./menu-icon"
 import { ThemeToggle } from "./theme-toggle"
 import { BreadcrumbTrail } from "./breadcrumb-trail"
 
@@ -101,7 +102,7 @@ export function Navigation() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
             </button>
           </div>
         </div>
