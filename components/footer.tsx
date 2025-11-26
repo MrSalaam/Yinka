@@ -1,10 +1,10 @@
 import { Github, Linkedin, Twitter, Instagram, CodepenIcon } from "lucide-react"
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/MrSalaam", label: "GitHub" },
+  { icon: Instagram, href: "https://instagram.com/", label: "Instagram" },
+  { icon: Twitter, href: "https://x.com/OlayinkaSZN", label: "Twitter" },
+  { icon: Linkedin, href: "https://linkedin.com/in/olayinka-salaam", label: "LinkedIn" },
   { icon: CodepenIcon, href: "https://codepen.io", label: "CodePen" },
 ]
 
@@ -27,12 +27,12 @@ export function Footer() {
           ))}
         </div>
         <a
-          href="https://github.com"
+          href="https://github.com/MrSalaam"
           target="_blank"
           rel="noopener noreferrer"
           className="font-mono text-xs text-muted-foreground hover:text-primary transition-colors"
         >
-          <div>Designed & Built by Alex Chen</div>
+          <div>Designed & Built by Olayinka Salaam</div>
           <div className="text-center mt-1">© 2025</div>
         </a>
       </div>

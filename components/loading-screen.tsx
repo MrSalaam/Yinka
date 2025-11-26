@@ -39,11 +39,8 @@ export function LoadingScreen({ onLoadingComplete }: { onLoadingComplete: () => 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background">
-      
-      
-
       <div className="relative z-10 flex flex-col items-center gap-8">
-        
+      
 
         {/* Terminal-style text */}
         <div className="flex flex-col items-center gap-4">

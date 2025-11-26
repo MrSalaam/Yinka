@@ -39,13 +39,13 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="min-h-screen flex flex-col justify-center py-24 lg:py-0 relative">
+    <section className="min-h-screen flex flex-col justify-center py-12 md:py-20 lg:py-0 relative px-4 md:px-0">
      
       
 
-      <div className="space-y-6 relative mt-20">
+      <div className="space-y-4 md:space-y-6 relative mt-12 md:mt-0">
         {/* Availability Badge & Location */}
-        <div className="flex flex-wrap items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <div className="flex flex-wrap items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700 md:mt-10 lg:mt-20">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -69,11 +69,11 @@ export function HeroSection() {
           {displayText}
           <span className={`${showCursor ? "opacity-100" : "opacity-0"} transition-opacity text-primary`}>|</span>
         </h2>
-        <p className="max-w-xl text-muted-foreground leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+        <p className="max-w-xl text-muted-foreground leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 text-sm md:text-base">
           I'm a frontend developer specializing in building exceptional digital experiences. Currently focused on
           creating accessible, pixel-perfect interfaces that blend thoughtful design with robust engineering.
         </p>
-        <div className="flex items-center gap-4 pt-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
+        <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
           <MagneticButton>
             <a
               href="#projects"
@@ -95,7 +95,7 @@ export function HeroSection() {
             </a>
           </MagneticButton>
         </div>
-        <div className="flex items-center gap-5 pt-8">
+        <div className="flex items-center gap-5 pt-6">
           {socialLinks.map((link, index) => (
             <a
               key={link.label}
@@ -112,7 +112,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-subtle">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 animate-bounce-subtle">
         <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
           <DoubleArrowDownIcon className="w-6 h-6" />
         </a>
