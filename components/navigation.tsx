@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { createPortal } from "react-dom"
 import { cn } from "../lib/utils"
 import { X } from "lucide-react"
 import { MenuIcon } from "./menu-icon"
@@ -17,11 +18,13 @@ const navItems = [
 ]
 
 export function Navigation() {
+  const [mounted, setMounted] = useState(false)
   const [activeSection, setActiveSection] = useState("")
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
 
@@ -113,50 +116,53 @@ export function Navigation() {
       </nav>
 
       {/* Full Screen Mobile Menu */}
-      <div
-        className={cn(
-          "fixed inset-0 bg-background/95 backdrop-blur-xl z-40 md:hidden transition-all duration-500 ease-in-out flex flex-col justify-center items-center",
-          isMobileMenuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-full pointer-events-none"
-        )}
-      >
-        <ul className="flex flex-col items-center gap-8 w-full px-6">
-          {navItems.map((item, index) => (
+      {mounted && createPortal(
+        <div
+          className={cn(
+            "fixed inset-0 bg-background/95 backdrop-blur-xl z-40 md:hidden transition-all duration-500 ease-in-out flex flex-col justify-center items-center",
+            isMobileMenuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-full pointer-events-none"
+          )}
+        >
+          <ul className="flex flex-col items-center gap-8 w-full px-6">
+            {navItems.map((item, index) => (
+              <li
+                key={item.href}
+                className={cn(
+                  "w-full text-center transform transition-all duration-500 delay-[100ms]",
+                  isMobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                )}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <a
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    "block text-3xl font-bold transition-colors hover:text-primary py-2",
+                    activeSection === item.href.slice(1) ? "text-primary" : "text-foreground/80",
+                  )}
+                >
+                  <span className="font-mono text-primary/50 text-lg block mb-1">0{index + 1}.</span>
+                  {item.label}
+                </a>
+              </li>
+            ))}
             <li
-              key={item.href}
               className={cn(
-                "w-full text-center transform transition-all duration-500 delay-[100ms]",
+                "mt-8 transform transition-all duration-500 delay-[500ms]",
                 isMobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               )}
-              style={{ transitionDelay: `${index * 100}ms` }}
             >
               <a
-                href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={cn(
-                  "block text-3xl font-bold transition-colors hover:text-primary py-2",
-                  activeSection === item.href.slice(1) ? "text-primary" : "text-foreground/80",
-                )}
+                href="/resume.pdf"
+                className="inline-flex items-center px-8 py-3 text-lg font-mono border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
-                <span className="font-mono text-primary/50 text-lg block mb-1">0{index + 1}.</span>
-                {item.label}
+                Resume
               </a>
             </li>
-          ))}
-          <li
-            className={cn(
-              "mt-8 transform transition-all duration-500 delay-[500ms]",
-              isMobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            )}
-          >
-            <a
-              href="/resume.pdf"
-              className="inline-flex items-center px-8 py-3 text-lg font-mono border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-            >
-              Resume
-            </a>
-          </li>
-        </ul>
-      </div>
+          </ul>
+        </div>,
+        document.body
+      )}
     </header>
   )
 }
