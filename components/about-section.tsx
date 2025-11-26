@@ -25,7 +25,7 @@ export function AboutSection() {
             
           </p>
           <p>
-            Fast-forward to today, I've had the privilege of working {" "}
+            Fast-forward to today, I've worked {" "}
             <a href="#" className="text-primary hover:underline decoration-2 underline-offset-4 transition-all">
               for a startup
             </a>
