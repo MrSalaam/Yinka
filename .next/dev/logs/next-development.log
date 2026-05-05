@@ -1,22 +1,2012 @@
-[00:00:06.001] Server  LOG      ✓ Ready in 4s
-[00:00:20.392] Server  LOG      ○ Compiling / ...
-[00:00:41.127] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:42.050] Browser LOG     %c Hey there, curious developer! color: #ec5a00; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
-[00:00:42.050] Browser LOG     %cWelcome to my portfolio color: #666; font-size: 14px; font-style: italic;
-[00:00:42.050] Browser LOG     
-[00:00:42.051] Browser LOG     %c
+[00:00:06.142] Server  LOG      ✓ Ready in 4.2s
+[00:00:09.580] Server  LOG      ○ Compiling / ...
+[00:00:21.292] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:21.717] Browser LOG     %c Hey there, curious developer! color: #ec5a00; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+[00:00:21.717] Browser LOG     %cWelcome to my portfolio color: #666; font-size: 14px; font-style: italic;
+[00:00:21.717] Browser LOG     
+[00:00:21.717] Browser LOG     %c
    _____ _____ _____ _____ _____ _____ _____ _____ 
   |     |   __|     |     |   __|  _  |     |   __|
   |  |  |   __|   --|  |  |   __|     | | | |   __|
   |_____|_____|_____|_____|_____|__|__|_|_|_|_____|
    color: #ec5a00; font-family: monospace; font-size: 10px; line-height: 1.2;
-[00:00:42.051] Browser LOG     
-[00:00:42.051] Browser LOG     %cI see you're checking out the console!  color: #333; font-size: 12px; line-height: 1.5;
-[00:00:42.051] Browser LOG     %cThis site is built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. color: #333; font-size: 12px; line-height: 1.5;
-[00:00:42.051] Browser LOG     
-[00:00:42.051] Browser LOG     %c Pro tip: Try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) for a surprise! color: #333; font-size: 12px; line-height: 1.5;
-[00:00:42.051] Browser LOG     
-[00:00:42.051] Browser LOG     %cLike what you see? Let's work together! color: #ec5a00; font-size: 12px; font-weight: bold;
-[00:00:42.051] Browser LOG     %c Contact me: olayinkasalaam.dev@gmail.com color: #ec5a00; font-size: 12px; font-weight: bold;
-[00:00:42.051] Browser LOG     
-[00:00:42.051] Browser LOG     %c Built with love and lots of coffee  color: #333; font-size: 12px; line-height: 1.5;
+[00:00:21.717] Browser LOG     
+[00:00:21.717] Browser LOG     %cI see you're checking out the console!  color: #333; font-size: 12px; line-height: 1.5;
+[00:00:21.718] Browser LOG     %cThis site is built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. color: #333; font-size: 12px; line-height: 1.5;
+[00:00:21.718] Browser LOG     
+[00:00:21.718] Browser LOG     %c Pro tip: Try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) for a surprise! color: #333; font-size: 12px; line-height: 1.5;
+[00:00:21.718] Browser LOG     
+[00:00:21.718] Browser LOG     %cLike what you see? Let's work together! color: #ec5a00; font-size: 12px; font-weight: bold;
+[00:00:21.718] Browser LOG     %c Contact me: olayinkasalaam.dev@gmail.com color: #ec5a00; font-size: 12px; font-weight: bold;
+[00:00:21.718] Browser LOG     
+[00:00:21.718] Browser LOG     %c Built with love and lots of coffee  color: #333; font-size: 12px; line-height: 1.5;
+[00:00:22.228] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:23.891] Browser LOG     %c Hey there, curious developer! color: #ec5a00; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+[00:00:23.891] Browser LOG     %cWelcome to my portfolio color: #666; font-size: 14px; font-style: italic;
+[00:00:23.891] Browser LOG     
+[00:00:23.891] Browser LOG     %c
+   _____ _____ _____ _____ _____ _____ _____ _____ 
+  |     |   __|     |     |   __|  _  |     |   __|
+  |  |  |   __|   --|  |  |   __|     | | | |   __|
+  |_____|_____|_____|_____|_____|__|__|_|_|_|_____|
+   color: #ec5a00; font-family: monospace; font-size: 10px; line-height: 1.2;
+[00:00:23.891] Browser LOG     
+[00:00:23.891] Browser LOG     %cI see you're checking out the console!  color: #333; font-size: 12px; line-height: 1.5;
+[00:00:23.891] Browser LOG     %cThis site is built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. color: #333; font-size: 12px; line-height: 1.5;
+[00:00:23.891] Browser LOG     
+[00:00:23.891] Browser LOG     %c Pro tip: Try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) for a surprise! color: #333; font-size: 12px; line-height: 1.5;
+[00:00:23.891] Browser LOG     
+[00:00:23.891] Browser LOG     %cLike what you see? Let's work together! color: #ec5a00; font-size: 12px; font-weight: bold;
+[00:00:23.891] Browser LOG     %c Contact me: olayinkasalaam.dev@gmail.com color: #ec5a00; font-size: 12px; font-weight: bold;
+[00:00:23.891] Browser LOG     
+[00:00:23.891] Browser LOG     %c Built with love and lots of coffee  color: #333; font-size: 12px; line-height: 1.5;
+[00:00:31.633] Server  LOG      ○ Compiling /projects ...
+[00:00:50.748] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:59.428] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:09.209] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:15.869] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:21.850] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:25.966] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:31.846] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:32.071] Browser LOG     %c Hey there, curious developer! color: #ec5a00; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+[00:01:32.071] Browser LOG     %cWelcome to my portfolio color: #666; font-size: 14px; font-style: italic;
+[00:01:32.071] Browser LOG     
+[00:01:32.071] Browser LOG     %c
+   _____ _____ _____ _____ _____ _____ _____ _____ 
+  |     |   __|     |     |   __|  _  |     |   __|
+  |  |  |   __|   --|  |  |   __|     | | | |   __|
+  |_____|_____|_____|_____|_____|__|__|_|_|_|_____|
+   color: #ec5a00; font-family: monospace; font-size: 10px; line-height: 1.2;
+[00:01:32.071] Browser LOG     
+[00:01:32.071] Browser LOG     %cI see you're checking out the console!  color: #333; font-size: 12px; line-height: 1.5;
+[00:01:32.071] Browser LOG     %cThis site is built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. color: #333; font-size: 12px; line-height: 1.5;
+[00:01:32.071] Browser LOG     
+[00:01:32.071] Browser LOG     %c Pro tip: Try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) for a surprise! color: #333; font-size: 12px; line-height: 1.5;
+[00:01:32.071] Browser LOG     
+[00:01:32.071] Browser LOG     %cLike what you see? Let's work together! color: #ec5a00; font-size: 12px; font-weight: bold;
+[00:01:32.071] Browser LOG     %c Contact me: olayinkasalaam.dev@gmail.com color: #ec5a00; font-size: 12px; font-weight: bold;
+[00:01:32.071] Browser LOG     
+[00:01:32.071] Browser LOG     %c Built with love and lots of coffee  color: #333; font-size: 12px; line-height: 1.5;
+[00:02:03.275] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:03.520] Browser LOG     %c Hey there, curious developer! color: #ec5a00; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+[00:02:03.520] Browser LOG     %cWelcome to my portfolio color: #666; font-size: 14px; font-style: italic;
+[00:02:03.520] Browser LOG     
+[00:02:03.520] Browser LOG     %c
+   _____ _____ _____ _____ _____ _____ _____ _____ 
+  |     |   __|     |     |   __|  _  |     |   __|
+  |  |  |   __|   --|  |  |   __|     | | | |   __|
+  |_____|_____|_____|_____|_____|__|__|_|_|_|_____|
+   color: #ec5a00; font-family: monospace; font-size: 10px; line-height: 1.2;
+[00:02:03.520] Browser LOG     
+[00:02:03.520] Browser LOG     %cI see you're checking out the console!  color: #333; font-size: 12px; line-height: 1.5;
+[00:02:03.520] Browser LOG     %cThis site is built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. color: #333; font-size: 12px; line-height: 1.5;
+[00:02:03.520] Browser LOG     
+[00:02:03.520] Browser LOG     %c Pro tip: Try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) for a surprise! color: #333; font-size: 12px; line-height: 1.5;
+[00:02:03.520] Browser LOG     
+[00:02:03.520] Browser LOG     %cLike what you see? Let's work together! color: #ec5a00; font-size: 12px; font-weight: bold;
+[00:02:03.521] Browser LOG     %c Contact me: olayinkasalaam.dev@gmail.com color: #ec5a00; font-size: 12px; font-weight: bold;
+[00:02:03.521] Browser LOG     
+[00:02:03.521] Browser LOG     %c Built with love and lots of coffee  color: #333; font-size: 12px; line-height: 1.5;
+[08:25:53.843] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:25:54.209] Browser LOG     %c Hey there, curious developer! color: #ec5a00; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+[08:25:54.209] Browser LOG     %cWelcome to my portfolio color: #666; font-size: 14px; font-style: italic;
+[08:25:54.209] Browser LOG     
+[08:25:54.209] Browser LOG     %c
+   _____ _____ _____ _____ _____ _____ _____ _____ 
+  |     |   __|     |     |   __|  _  |     |   __|
+  |  |  |   __|   --|  |  |   __|     | | | |   __|
+  |_____|_____|_____|_____|_____|__|__|_|_|_|_____|
+   color: #ec5a00; font-family: monospace; font-size: 10px; line-height: 1.2;
+[08:25:54.209] Browser LOG     
+[08:25:54.209] Browser LOG     %cI see you're checking out the console!  color: #333; font-size: 12px; line-height: 1.5;
+[08:25:54.209] Browser LOG     %cThis site is built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. color: #333; font-size: 12px; line-height: 1.5;
+[08:25:54.209] Browser LOG     
+[08:25:54.209] Browser LOG     %c Pro tip: Try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) for a surprise! color: #333; font-size: 12px; line-height: 1.5;
+[08:25:54.209] Browser LOG     
+[08:25:54.209] Browser LOG     %cLike what you see? Let's work together! color: #ec5a00; font-size: 12px; font-weight: bold;
+[08:25:54.209] Browser LOG     %c Contact me: olayinkasalaam.dev@gmail.com color: #ec5a00; font-size: 12px; font-weight: bold;
+[08:25:54.210] Browser LOG     
+[08:25:54.210] Browser LOG     %c Built with love and lots of coffee  color: #333; font-size: 12px; line-height: 1.5;
+[08:26:05.815] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:26:14.535] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:26:26.666] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:26:34.701] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:26:38.870] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:26:43.033] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:26:48.858] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:26:49.104] Browser LOG     %c Hey there, curious developer! color: #ec5a00; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+[08:26:49.104] Browser LOG     %cWelcome to my portfolio color: #666; font-size: 14px; font-style: italic;
+[08:26:49.104] Browser LOG     
+[08:26:49.104] Browser LOG     %c
+   _____ _____ _____ _____ _____ _____ _____ _____ 
+  |     |   __|     |     |   __|  _  |     |   __|
+  |  |  |   __|   --|  |  |   __|     | | | |   __|
+  |_____|_____|_____|_____|_____|__|__|_|_|_|_____|
+   color: #ec5a00; font-family: monospace; font-size: 10px; line-height: 1.2;
+[08:26:49.104] Browser LOG     
+[08:26:49.104] Browser LOG     %cI see you're checking out the console!  color: #333; font-size: 12px; line-height: 1.5;
+[08:26:49.104] Browser LOG     %cThis site is built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. color: #333; font-size: 12px; line-height: 1.5;
+[08:26:49.104] Browser LOG     
+[08:26:49.104] Browser LOG     %c Pro tip: Try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) for a surprise! color: #333; font-size: 12px; line-height: 1.5;
+[08:26:49.104] Browser LOG     
+[08:26:49.104] Browser LOG     %cLike what you see? Let's work together! color: #ec5a00; font-size: 12px; font-weight: bold;
+[08:26:49.104] Browser LOG     %c Contact me: olayinkasalaam.dev@gmail.com color: #ec5a00; font-size: 12px; font-weight: bold;
+[08:26:49.104] Browser LOG     
+[08:26:49.104] Browser LOG     %c Built with love and lots of coffee  color: #333; font-size: 12px; line-height: 1.5;
+[08:27:15.129] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:27:15.385] Browser LOG     %c Hey there, curious developer! color: #ec5a00; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+[08:27:15.385] Browser LOG     %cWelcome to my portfolio color: #666; font-size: 14px; font-style: italic;
+[08:27:15.385] Browser LOG     
+[08:27:15.385] Browser LOG     %c
+   _____ _____ _____ _____ _____ _____ _____ _____ 
+  |     |   __|     |     |   __|  _  |     |   __|
+  |  |  |   __|   --|  |  |   __|     | | | |   __|
+  |_____|_____|_____|_____|_____|__|__|_|_|_|_____|
+   color: #ec5a00; font-family: monospace; font-size: 10px; line-height: 1.2;
+[08:27:15.385] Browser LOG     
+[08:27:15.385] Browser LOG     %cI see you're checking out the console!  color: #333; font-size: 12px; line-height: 1.5;
+[08:27:15.385] Browser LOG     %cThis site is built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. color: #333; font-size: 12px; line-height: 1.5;
+[08:27:15.385] Browser LOG     
+[08:27:15.385] Browser LOG     %c Pro tip: Try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) for a surprise! color: #333; font-size: 12px; line-height: 1.5;
+[08:27:15.385] Browser LOG     
+[08:27:15.385] Browser LOG     %cLike what you see? Let's work together! color: #ec5a00; font-size: 12px; font-weight: bold;
+[08:27:15.385] Browser LOG     %c Contact me: olayinkasalaam.dev@gmail.com color: #ec5a00; font-size: 12px; font-weight: bold;
+[08:27:15.385] Browser LOG     
+[08:27:15.385] Browser LOG     %c Built with love and lots of coffee  color: #333; font-size: 12px; line-height: 1.5;
+[08:28:57.828] Server  LOG      ✓ Compiled in 128ms
+[08:29:02.084] Server  LOG      ✓ Compiled in 134ms
+[08:29:06.431] Server  LOG      ✓ Compiled in 128ms
+[08:29:11.518] Server  LOG      ✓ Compiled in 651ms
+[08:29:18.474] Server  LOG      ✓ Compiled in 132ms
+[08:29:27.927] Server  LOG      ✓ Compiled in 107ms
+[08:29:31.381] Server  LOG      ✓ Compiled in 146ms
+[08:29:37.038] Server  LOG      ✓ Compiled in 59ms
+[08:30:03.192] Server  LOG      ✓ Compiled in 48ms
+[08:30:11.702] Server  LOG      ✓ Compiled in 40ms
+[08:30:15.410] Server  LOG      ✓ Compiled in 73ms
+[08:32:23.268] Server  LOG      ✓ Compiled in 44ms
+[08:32:25.439] Server  LOG      ✓ Compiled in 154ms
+[08:32:37.196] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:33:15.564] Server  LOG      ✓ Compiled in 40ms
+[08:33:19.608] Server  LOG      ✓ Compiled in 36ms
+[08:33:21.304] Server  LOG      ✓ Compiled in 39ms
+[08:33:26.221] Server  LOG      ✓ Compiled in 38ms
+[08:33:29.436] Server  LOG      ✓ Compiled in 81ms
+[08:33:56.208] Server  LOG      ✓ Compiled in 44ms
+[08:33:58.946] Server  LOG      ✓ Compiled in 42ms
+[08:34:05.807] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:34:22.883] Server  LOG      ✓ Compiled in 146ms
+[08:34:26.553] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:35:04.152] Server  LOG      ✓ Compiled in 48ms
+[08:35:14.269] Server  LOG      ✓ Compiled in 454ms
+[08:36:40.865] Server  LOG      ✓ Compiled in 56ms
+[08:36:56.605] Server  LOG      ✓ Compiled in 97ms
+[08:37:06.897] Server  LOG      ✓ Compiled in 56ms
+[08:38:05.757] Server  LOG      ✓ Compiled in 121ms
+[08:38:42.472] Server  LOG      ✓ Compiled in 60ms
+[08:38:42.893] Browser ERROR   ./components/projects-section.tsx:102:15
+Parsing ecmascript source code failed
+  100 |             </motion.div>
+  101 |           ))}
+> 102 |         </div>
+      |               ^
+> 103 |
+      | ^
+> 104 |       
+      | ^
+> 105 |         <div className="mt-48 flex flex-col md:flex-row items-center justify-between gap-12 pt-12 border-t border-border">
+      | ^^^^^^^^^
+  106 |           <a
+  107 |             href="/"
+  108 |             className="inline-flex items-center gap-4 text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground hover:text-foreground transition-all duration-300 group"
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import trace:
+  Server Component:
+    ./components/projects-section.tsx
+    ./app/projects/page.tsx
+[08:38:42.894] Browser ERROR   ./components/projects-section.tsx:102:15
+Parsing ecmascript source code failed
+  100 |             </motion.div>
+  101 |           ))}
+> 102 |         </div>
+      |               ^
+> 103 |
+      | ^
+> 104 |       
+      | ^
+> 105 |         <div className="mt-48 flex flex-col md:flex-row items-center justify-between gap-12 pt-12 border-t border-border">
+      | ^^^^^^^^^
+  106 |           <a
+  107 |             href="/"
+  108 |             className="inline-flex items-center gap-4 text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground hover:text-foreground transition-all duration-300 group"
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import trace:
+  Server Component:
+    ./components/projects-section.tsx
+    ./app/projects/page.tsx
+[08:38:53.892] Browser ERROR   ./components/projects-section.tsx:121:15
+Parsing ecmascript source code failed
+  119 |             </motion.div>
+  120 |           ))}
+> 121 |         </div>
+      |               ^
+> 122 |
+      | ^
+> 123 |       
+      | ^
+> 124 |         <div className="mt-48 flex flex-col md:flex-row items-center justify-between gap-12 pt-12 border-t border-border">
+      | ^^^^^^^^^
+  125 |           <a
+  126 |             href="/"
+  127 |             className="inline-flex items-center gap-4 text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground hover:text-foreground transition-all duration-300 group"
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import trace:
+  Server Component:
+    ./components/projects-section.tsx
+    ./app/projects/page.tsx
+[08:38:53.893] Browser ERROR   ./components/projects-section.tsx:121:15
+Parsing ecmascript source code failed
+  119 |             </motion.div>
+  120 |           ))}
+> 121 |         </div>
+      |               ^
+> 122 |
+      | ^
+> 123 |       
+      | ^
+> 124 |         <div className="mt-48 flex flex-col md:flex-row items-center justify-between gap-12 pt-12 border-t border-border">
+      | ^^^^^^^^^
+  125 |           <a
+  126 |             href="/"
+  127 |             className="inline-flex items-center gap-4 text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground hover:text-foreground transition-all duration-300 group"
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import trace:
+  Server Component:
+    ./components/projects-section.tsx
+    ./app/projects/page.tsx
+[08:39:06.863] Server  LOG      ✓ Compiled in 82ms
+[08:39:07.889] Browser ERROR   ./components/projects-section.tsx:120:12
+Parsing ecmascript source code failed
+  118 |               </div>
+  119 |             </motion.div>
+> 120 |           </AnimatePresence>
+      |            ^^^^^^^^^^^^^^^^^
+  121 |         </div>
+  122 |
+  123 |         {/* Pagination UI */}
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./components/projects-section.tsx
+    ./app/projects/page.tsx
+[08:39:07.889] Browser ERROR   ./components/projects-section.tsx:120:12
+Parsing ecmascript source code failed
+  118 |               </div>
+  119 |             </motion.div>
+> 120 |           </AnimatePresence>
+      |            ^^^^^^^^^^^^^^^^^
+  121 |         </div>
+  122 |
+  123 |         {/* Pagination UI */}
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./components/projects-section.tsx
+    ./app/projects/page.tsx
+[08:42:57.134] Server  LOG      ✓ Compiled in 194ms
+[08:44:14.117] Server  LOG      ✓ Compiled in 58ms
+[08:44:20.595] Server  LOG      ✓ Compiled in 76ms
+[08:44:24.802] Server  LOG      ✓ Compiled in 102ms
+[08:44:42.757] Server  LOG      ✓ Compiled in 58ms
+[08:45:00.267] Server  LOG      ✓ Compiled in 52ms
+[08:46:04.026] Server  LOG      ✓ Compiled in 51ms
+[08:46:07.800] Server  LOG      ✓ Compiled in 42ms
+[08:46:15.234] Server  LOG      ✓ Compiled in 53ms
+[08:46:17.621] Server  LOG      ✓ Compiled in 45ms
+[08:46:20.456] Server  LOG      ✓ Compiled in 50ms
+[08:46:23.793] Server  LOG      ✓ Compiled in 48ms
+[08:46:33.917] Server  LOG      ✓ Compiled in 45ms
+[08:46:36.789] Server  LOG      ✓ Compiled in 61ms
+[08:46:41.189] Server  LOG      ✓ Compiled in 41ms
+[08:46:46.241] Server  LOG      ✓ Compiled in 46ms
+[08:46:50.017] Server  LOG      ✓ Compiled in 56ms
+[08:47:17.422] Server  LOG      ✓ Compiled in 48ms
+[08:47:23.626] Server  LOG      ✓ Compiled in 47ms
+[08:47:29.022] Server  LOG      ✓ Compiled in 42ms
+[08:47:34.038] Server  LOG      ✓ Compiled in 50ms
+[08:47:37.246] Server  LOG      ✓ Compiled in 75ms
+[08:47:41.328] Server  LOG      ✓ Compiled in 49ms
+[08:47:50.427] Server  LOG      ✓ Compiled in 41ms
+[08:47:51.786] Server  LOG      ✓ Compiled in 51ms
+[08:48:08.293] Server  LOG      ✓ Compiled in 41ms
+[08:48:12.398] Server  LOG      ✓ Compiled in 42ms
+[08:48:18.883] Server  LOG      ✓ Compiled in 41ms
+[08:48:23.555] Server  LOG      ✓ Compiled in 44ms
+[08:48:25.102] Server  LOG      ✓ Compiled in 50ms
+[08:48:25.893] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: control character (\u0000-\u001F) found while parsing a string at line 25 column 0
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: control character (\u0000-\u001F) found while parsing a string at line 25 column 0
+    at [2].link
+      21 |     "category": "UI Design",
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://admin-dev.learnille.com/
+         | v
+      25 +   }
+         | ^
+      26 | ]
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[08:48:26.893] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: control character (\u0000-\u001F) found while parsing a string at line 25 column 0
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: control character (\u0000-\u001F) found while parsing a string at line 25 column 0
+    at [2].link
+      21 |     "category": "UI Design",
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://admin-dev.learnille.com/
+         | v
+      25 +   }
+         | ^
+      26 | ]
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[08:48:39.403] Server  LOG      ✓ Compiled in 64ms
+[08:49:09.061] Server  LOG      ✓ Compiled in 40ms
+[08:49:09.903] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     
+      28 |   }
+      29 | ]
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[08:49:10.650] Server  LOG      ✓ Compiled in 45ms
+[08:49:10.900] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     ""
+      28 |   }
+      29 | ]
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[08:49:13.362] Server  LOG      ✓ Compiled in 50ms
+[08:49:13.891] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "UI Design",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[08:49:18.486] Server  LOG      ✓ Compiled in 55ms
+[08:49:18.890] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "Website",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[08:49:25.714] Server  LOG      ✓ Compiled in 52ms
+[08:49:25.904] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:35:39.450] Server  ERROR    ⨯ ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+
+
+[12:35:39.563] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:35:39.898] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:35:41.122] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:35:41.541] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:35:41.901] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:35:41.901] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:35:43.619] Browser ERROR   uncaughtError: Error: ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+
+
+[12:35:43.783] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:35:43.906] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:35:44.020] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:35:44.902] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:36:07.907] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:36:07.907] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 26 column 3
+    at .
+      22 |     "year": "2026",
+      23 |     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+      24 |     "link": "https://consultation.staging.learnille.com/"
+      25 |   }
+         |   v
+      26 +   {
+         |   ^
+      27 |     "id": "04",
+      28 |     "title": "",
+      29 |     "category": "Website",
+      30 |     "year": "2026",
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:36:13.310] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:38:41.299] Server  LOG      ✓ Compiled in 47ms
+[12:38:43.823] Server  LOG      ✓ Compiled in 51ms
+[12:39:42.318] Server  LOG      ✓ Compiled in 167ms
+[12:40:19.979] Server  LOG      ✓ Compiled in 39ms
+[12:40:24.090] Server  LOG      ✓ Compiled in 41ms
+[12:42:09.891] Server  LOG      ✓ Compiled in 68ms
+[12:42:13.559] Server  LOG      ✓ Compiled in 42ms
+[12:42:19.667] Server  LOG      ✓ Compiled in 42ms
+[12:44:46.202] Server  LOG      ✓ Compiled in 58ms
+[12:44:46.888] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 34 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 34 column 1
+    at .
+      30 |     "year": "2025-2026",
+      31 |     "description": "Landing page for Learnille.",
+      32 |     "link": "https://staging.learnille.com/"
+      33 |   },
+         | v
+      34 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/projects.json
+    ./components/projects-section.tsx [Client Component SSR]
+    ./components/projects-section.tsx [Server Component]
+    ./app/projects/page.tsx [Server Component]
+[12:44:49.729] Server  LOG      ✓ Compiled in 56ms
+[12:44:52.910] Server  LOG      ✓ Compiled in 52ms
+[12:45:00.811] Server  LOG      ✓ Compiled in 44ms
+[12:45:03.622] Server  LOG      ✓ Compiled in 42ms
+[12:45:07.787] Server  LOG      ✓ Compiled in 52ms
+[12:45:11.300] Server  LOG      ✓ Compiled in 54ms
+[12:45:14.061] Server  LOG      ✓ Compiled in 49ms
+[12:45:19.144] Server  LOG      ✓ Compiled in 46ms
+[12:45:47.155] Server  LOG      ✓ Compiled in 60ms
+[12:45:54.665] Server  LOG      ✓ Compiled in 41ms
+[12:45:59.025] Server  LOG      ✓ Compiled in 45ms
+[12:46:09.274] Server  LOG      ✓ Compiled in 45ms
+[12:46:16.471] Server  LOG      ✓ Compiled in 45ms
+[12:48:46.069] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:49:24.650] Server  LOG      ✓ Compiled in 77ms
+[12:49:26.117] Server  LOG      ✓ Compiled in 55ms
+[12:49:36.477] Server  LOG      ✓ Compiled in 78ms
+[12:49:41.813] Server  LOG      ✓ Compiled in 54ms
+[12:49:52.201] Server  LOG      ✓ Compiled in 50ms
+[12:49:53.277] Server  LOG      ✓ Compiled in 61ms
+[12:49:56.578] Server  LOG      ✓ Compiled in 74ms
+[12:50:14.283] Server  LOG      ✓ Compiled in 46ms
+[12:50:20.347] Server  LOG      ✓ Compiled in 54ms
+[12:50:25.125] Server  LOG      ✓ Compiled in 60ms
+[12:50:28.364] Server  LOG      ✓ Compiled in 254ms
+[12:50:33.585] Server  LOG      ✓ Compiled in 97ms
+[12:50:33.891] Browser ERROR   ./components/about-section.tsx:62:15
+Parsing ecmascript source code failed
+  60 |                 <li>shadcn/ui</li>
+  61 |                 <
+> 62 |               </ul>
+     |               ^
+  63 |             </FadeIn>
+  64 |
+  65 |             <FadeIn delay={0.4} className="pt-8">
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/about/page.tsx
+[12:50:33.891] Browser ERROR   ./components/about-section.tsx:62:16
+Parsing ecmascript source code failed
+  60 |                 <li>shadcn/ui</li>
+  61 |                 <
+> 62 |               </ul>
+     |                ^^^^
+  63 |             </FadeIn>
+  64 |
+  65 |             <FadeIn delay={0.4} className="pt-8">
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/about/page.tsx
+[12:50:33.892] Browser ERROR   ./components/about-section.tsx:62:15
+Parsing ecmascript source code failed
+  60 |                 <li>shadcn/ui</li>
+  61 |                 <
+> 62 |               </ul>
+     |               ^
+  63 |             </FadeIn>
+  64 |
+  65 |             <FadeIn delay={0.4} className="pt-8">
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/about/page.tsx
+[12:50:33.892] Browser ERROR   ./components/about-section.tsx:62:16
+Parsing ecmascript source code failed
+  60 |                 <li>shadcn/ui</li>
+  61 |                 <
+> 62 |               </ul>
+     |                ^^^^
+  63 |             </FadeIn>
+  64 |
+  65 |             <FadeIn delay={0.4} className="pt-8">
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/about/page.tsx
+[12:50:36.449] Server  LOG      ✓ Compiled in 249ms
+[12:50:43.064] Server  LOG      ✓ Compiled in 47ms
+[12:50:46.548] Server  LOG      ✓ Compiled in 323ms
+[12:50:55.312] Server  LOG      ✓ Compiled in 55ms
+[12:51:00.408] Server  LOG      ✓ Compiled in 68ms
+[12:51:11.007] Server  LOG      ✓ Compiled in 54ms
+[12:51:37.724] Server  LOG      ✓ Compiled in 48ms
+[12:51:55.813] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:53:21.358] Server  LOG      ✓ Compiled in 396ms
+[12:53:21.910] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 17 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 17 column 1
+    at .
+      13 |     "location": "LAGOS",
+      14 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      15 |   },
+      16 |  
+         | v
+      17 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:53:23.772] Server  LOG      ✓ Compiled in 152ms
+[12:53:24.047] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 8 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 8 column 3
+    at .
+       4 |     "period": "2024 — 2025",
+       5 |     "location": "LAGOS",
+       6 |     "description": "Engineered responsive systems and collaborated with cross-functional teams to build accessible, pixel-perfect user experiences."
+       7 |   }
+         |   v
+       8 +   {
+         |   ^
+       9 |     "company": "Learnille",
+      10 |     "role": "Senior Frontend Architect",
+      11 |     "period": "2025 — PRESENT",
+      12 |     "location": "REMOTE",
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:53:25.853] Server  LOG      ✓ Compiled in 520ms
+[12:53:26.029] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:53:37.901] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:53:43.889] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:53:47.899] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:53:49.898] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:53:54.895] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:54:03.890] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:54:07.077] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:54:16.897] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:54:20.901] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:54:21.909] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:54:24.895] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "LAGOS",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:54:54.180] Server  LOG      ✓ Compiled in 155ms
+[12:54:54.890] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "R",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:54:56.324] Server  LOG      ✓ Compiled in 132ms
+[12:54:56.905] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:07.901] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:12.894] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:24.898] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:26.901] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:29.899] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrated the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:35.436] Server  LOG      ✓ Compiled in 117ms
+[12:55:35.900] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with 35% improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:42.308] Server  LOG      ✓ Compiled in 179ms
+[12:55:42.898] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with  improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:43.333] Server  LOG      ✓ Compiled in 173ms
+[12:55:43.893] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:48.453] Server  ERROR    ⨯ ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+
+
+[12:55:48.960] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:48.960] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:49.204] Browser ERROR   uncaughtError: Error: ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+
+
+[12:55:49.399] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:49.399] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:49.899] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:55.820] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:55.892] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 23 column 1
+    at .
+      19 |     "location": "REMOTE",
+      20 |     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+      21 |   },
+      22 |  
+         | v
+      23 + ]
+         | ^
+
+Import trace:
+  Client Component SSR:
+    ./data/experience.json
+    ./components/experience-section.tsx [Client Component SSR]
+    ./components/experience-section.tsx [Server Component]
+    ./app/experience/page.tsx [Server Component]
+[12:55:59.366] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:56:33.574] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:57:54.203] Server  LOG      ✓ Compiled in 124ms
+[12:58:42.082] Server  LOG      ✓ Compiled in 188ms
+[12:59:09.845] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:59:13.786] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:59:18.148] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:59:26.509] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:59:26.736] Browser LOG     %c Hey there, curious developer! color: #ec5a00; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+[12:59:26.736] Browser LOG     %cWelcome to my portfolio color: #666; font-size: 14px; font-style: italic;
+[12:59:26.736] Browser LOG     
+[12:59:26.736] Browser LOG     %c
+   _____ _____ _____ _____ _____ _____ _____ _____ 
+  |     |   __|     |     |   __|  _  |     |   __|
+  |  |  |   __|   --|  |  |   __|     | | | |   __|
+  |_____|_____|_____|_____|_____|__|__|_|_|_|_____|
+   color: #ec5a00; font-family: monospace; font-size: 10px; line-height: 1.2;
+[12:59:26.736] Browser LOG     
+[12:59:26.736] Browser LOG     %cI see you're checking out the console!  color: #333; font-size: 12px; line-height: 1.5;
+[12:59:26.736] Browser LOG     %cThis site is built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. color: #333; font-size: 12px; line-height: 1.5;
+[12:59:26.736] Browser LOG     
+[12:59:26.736] Browser LOG     %c Pro tip: Try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) for a surprise! color: #333; font-size: 12px; line-height: 1.5;
+[12:59:26.736] Browser LOG     
+[12:59:26.736] Browser LOG     %cLike what you see? Let's work together! color: #ec5a00; font-size: 12px; font-weight: bold;
+[12:59:26.736] Browser LOG     %c Contact me: olayinkasalaam.dev@gmail.com color: #ec5a00; font-size: 12px; font-weight: bold;
+[12:59:26.736] Browser LOG     
+[12:59:26.736] Browser LOG     %c Built with love and lots of coffee  color: #333; font-size: 12px; line-height: 1.5;

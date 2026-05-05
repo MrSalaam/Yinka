@@ -2,6 +2,8 @@ import type React from "react"
 import { ThemeProvider } from "next-themes"
 import "./globals.css"
 
+import { SmoothScroll } from "@/components/smooth-scroll"
+
 export default function RootLayout({
   children,
 }: {
@@ -26,7 +28,9 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {children}
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>

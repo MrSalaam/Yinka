@@ -1,122 +1,101 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { Github, Linkedin, Twitter, Mail, MapPin } from "lucide-react"
-import { MagneticButton } from "./magnetic-button"
-import { DoubleArrowDownIcon, ArrowRightIcon} from "@radix-ui/react-icons"
-
-
-const socialLinks = [
-  { icon: Github, href: "https://github.com/MrSalaam", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/olayinka-salaam", label: "LinkedIn" },
-  { icon: Twitter, href: "https://x.com/OlayinkaSZN", label: "Twitter" },
-  { icon: Mail, href: "mailto:olayinkasalaam.dev@gmail.com", label: "Email" },
-]
+import { DoubleArrowDownIcon } from "@radix-ui/react-icons"
+import { GlossyButton } from "./ui/glossy-button"
+import { ArrowUpRight01Icon } from "hugeicons-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { TextReveal } from "./ui/text-reveal"
+import { MagneticEffect } from "./ui/magnetic-effect"
+import { FadeIn } from "./ui/fade-in"
 
 export function HeroSection() {
-  const [displayText, setDisplayText] = useState("")
-  const [showCursor, setShowCursor] = useState(true)
-  const fullText = "I build things for the web."
+  const router = useRouter()
+  const [isNavigating, setIsNavigating] = useState(false)
 
-  useEffect(() => {
-    let index = 0
-    const interval = setInterval(() => {
-      if (index <= fullText.length) {
-        setDisplayText(fullText.slice(0, index))
-        index++
-      } else {
-        clearInterval(interval)
-      }
-    }, 50)
-    return () => clearInterval(interval)
-  }, [])
-
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev)
-    }, 530)
-    return () => clearInterval(cursorInterval)
-  }, [])
+  const handleNavigate = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    setIsNavigating(true)
+    setTimeout(() => {
+      router.push("/projects")
+    }, 1000)
+  }
 
   return (
-    <section className="min-h-screen flex flex-col justify-center py-12 md:py-20 lg:py-0 relative px-4 md:px-0">
-     
-      
+    <>
+      <AnimatePresence>
+        {isNavigating && (
+          <motion.div
+            className="fixed inset-0 z-[100] bg-foreground flex items-center justify-center pointer-events-none"
+            initial={{ height: "0vh", top: 0 }}
+            animate={{ height: "100vh" }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+          >
+            <motion.div className="overflow-hidden">
+              <motion.h1
+                className="text-background text-[15vw] md:text-[10vw] font-black uppercase tracking-tighter leading-none"
+                initial={{ y: "100%" }}
+                animate={{ y: "0%" }}
+                transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+              >
+                PROJECTS
+              </motion.h1>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      <div className="space-y-4 md:space-y-6 relative mt-12 md:mt-0">
-        {/* Availability Badge & Location */}
-        <div className="flex flex-wrap items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700 md:mt-10 lg:mt-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 backdrop-blur-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
-            <span className="text-xs font-medium text-green-600 dark:text-green-400">Available for work</span>
-          </div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/5 border border-primary/10 backdrop-blur-sm">
-            <MapPin className="w-3 h-3 text-primary" />
-            <span className="text-xs font-medium text-muted-foreground">Lagos, Nigeria</span>
-          </div>
+      <section className="min-h-screen flex flex-col justify-center items-center relative px-4 md:px-0">
+        <div className="flex flex-col items-start text-left space-y-8 w-full max-w-7xl mx-auto px-6 lg:px-12 z-20 relative">
+
+          <TextReveal 
+            text="Pristine Web Architect." 
+            className="max-w-none pb-4"
+            textClassName="text-6xl md:text-8xl lg:text-9xl uppercase font-bold tracking-tighter leading-none bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800 dark:from-gray-600 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent pb-4"
+          />
+
+          <FadeIn delay={0.6}>
+            <div className="pt-8 flex flex-col sm:flex-row items-center gap-6">
+              <a href="/projects" onClick={handleNavigate}>
+                <MagneticEffect>
+                  <GlossyButton className="flex items-center gap-2">
+                    <span>View Exhibition</span>
+                    <ArrowUpRight01Icon size={18} />
+                  </GlossyButton>
+                </MagneticEffect>
+              </a>
+            </div>
+          </FadeIn>
         </div>
 
-        <p className="font-mono text-primary text-sm md:text-base animate-in fade-in slide-in-from-bottom-4 duration-700">
-          Hi, my name is
-        </p>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 hover:text-primary transition-colors cursor-default">
-          Yinka Salaam.
-        </h1>
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-muted-foreground animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-          {displayText}
-          <span className={`${showCursor ? "opacity-100" : "opacity-0"} transition-opacity text-primary`}>|</span>
-        </h2>
-        <p className="max-w-xl text-muted-foreground leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 text-sm md:text-base">
-          I'm a frontend developer specializing in building exceptional digital experiences. Currently focused on
-          creating accessible, pixel-perfect interfaces that blend thoughtful design with robust engineering.
-        </p>
-        <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
-          <MagneticButton>
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-3 px-6 py-3 font-mono text-sm bg-primary text-primary-foreground rounded-lg hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-1 transition-all duration-300 group"
-            >
-              Check out my work
-              
-            </a>
-          </MagneticButton>
-          <MagneticButton>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-3 px-6 py-3 font-mono text-sm border-2 border-primary text-primary rounded-lg hover:bg-primary/10 hover:-translate-y-1 transition-all duration-300 group"
-            >
-              Get in touch
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 group-hover:bg-primary/30 transition-colors">
-                <ArrowRightIcon className="w-3 h-3" />
-              </span>
-            </a>
-          </MagneticButton>
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-50 hover:opacity-100 transition-opacity duration-500 z-10">
+          <a href="#about" aria-label="Scroll down">
+            <DoubleArrowDownIcon className="w-5 h-5 animate-bounce-subtle text-foreground" />
+          </a>
         </div>
-        <div className="flex items-center gap-5 pt-6">
-          {socialLinks.map((link, index) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary hover:-translate-y-2 hover:scale-110 transition-all duration-300 animate-in fade-in slide-in-from-bottom-4"
-              style={{ animationDelay: `${500 + index * 100}ms`, animationDuration: "700ms" }}
-              aria-label={link.label}
-            >
-              <link.icon className="w-5 h-5" />
-            </a>
-          ))}
-        </div>
-      </div>
 
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 animate-bounce-subtle">
-        <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-          <DoubleArrowDownIcon className="w-6 h-6" />
-        </a>
-      </div>
-    </section>
+
+        <div className="absolute bottom-0 right-0 pointer-events-none select-none overflow-hidden translate-y-1/4 opacity-[0.03] dark:opacity-[0.02] w-full flex">
+          <motion.div
+            animate={{ x: [0, "-50%"] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 35,
+              ease: "linear",
+            }}
+            className="flex whitespace-nowrap"
+          >
+            {[...Array(6)].map((_, i) => (
+              <h2 key={i} className="text-[15vw] md:text-[12vw] font-bold uppercase tracking-[0.1em] leading-none pr-24">
+                Frontend Developer
+              </h2>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+    </>
   )
 }

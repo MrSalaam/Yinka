@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/olayi/Desktop/Yinka/components/smooth-scroll.tsx"],"sourcesContent":["\"use client\"\n\nimport { ReactLenis } from '@studio-freight/react-lenis'\n\nexport function SmoothScroll({ children }: { children: React.ReactNode }) {\n  return (\n    <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>\n      {children as any}\n    </ReactLenis>\n  )\n}\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIO,SAAS,aAAa,EAAE,QAAQ,EAAiC;IACtE,qBACE,8OAAC,8LAAU;QAAC,IAAI;QAAC,SAAS;YAAE,MAAM;YAAK,UAAU;YAAK,aAAa;QAAK;kBACrE;;;;;;AAGP"}}]
+}

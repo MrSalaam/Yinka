@@ -1,164 +1,95 @@
 "use client"
 
-import { useState, useRef } from "react"
-import { cn } from "../lib/utils"
-import gsap from "gsap"
-import { useGSAP } from "@gsap/react"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-
-gsap.registerPlugin(useGSAP, ScrollTrigger)
-
-const experiences = [
-  {
-    company: "MIC",
-    role: " Frontend Developer Intern",
-    period: "March - September 2025",
-    description: [
-      "Developed a responsive and user-friendly website for the company, using HTML and CSS",
-      "Collaborated with the design team to implement pixel-perfect, accessible interfaces",
-      "Assited my felllow interns and conduct code reviews to maintain code quality",
-      
-    ],
-    technologies: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    company: "S.A Ayilara",
-    role: "Frontend Developer",
-    period: "2025",
-    description: [
-      "Designed and Developed a portfoolio website for MR Sodiq Ayilara",
-      "Implemented Shadcn UI",
-      "Reduced bundle size by 35% through code splitting and lazy lading",
-      "Responsive across all devices",
-    ],
-    technologies: ["React", "TailwindCSS", "TypeScript", "Shadcn UI"],
-  },
-  {
-    company: "Learnille",
-    role: "Frontend Developer",
-    period: "2025 - Present",
-    description: [
-      "Working on admin dashboard",
-      
-    ],
-    technologies: ["TypeScript", "React", "Tanstack Query", "Chakra UI", "Figma"],
-  },
-]
+import { motion } from "framer-motion"
+import { GlossyButton } from "./ui/glossy-button"
+import experiences from "../data/experience.json"
+import { TextReveal } from "./ui/text-reveal"
+import { MagneticEffect } from "./ui/magnetic-effect"
+import { ArrowUpRight01Icon } from "hugeicons-react"
+import { FadeIn } from "./ui/fade-in"
 
 export function ExperienceSection() {
-  const [activeTab, setActiveTab] = useState(0)
-  const containerRef = useRef<HTMLElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
-
-  useGSAP(
-    () => {
-      // Scroll reveal
-      gsap.from(".section-title", {
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-        },
-        x: -50,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-      })
-
-      gsap.from(".experience-content", {
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 70%",
-        },
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-      })
-    },
-    { scope: containerRef },
-  )
-
-  // Animate content when tab changes
-  useGSAP(
-    () => {
-      if (!contentRef.current) return
-
-      const tl = gsap.timeline()
-
-      tl.fromTo(
-        contentRef.current,
-        { opacity: 0, y: 10 },
-        { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
-      )
-        .fromTo(
-          ".job-item",
-          { opacity: 0, x: -10 },
-          { opacity: 1, x: 0, duration: 0.3, stagger: 0.05, ease: "power2.out" },
-          "-=0.2"
-        )
-        .fromTo(
-          ".tech-tag",
-          { opacity: 0, scale: 0.8 },
-          { opacity: 1, scale: 1, duration: 0.3, stagger: 0.03, ease: "back.out(1.5)" },
-          "-=0.2"
-        )
-    },
-    { scope: containerRef, dependencies: [activeTab] },
-  )
-
   return (
-    <section id="experience" className="py-24 scroll-mt-20" ref={containerRef}>
-      <div className="section-title flex items-center gap-4 mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground whitespace-nowrap">
-          <span className="font-mono text-primary mr-2">02.</span>
-          Where I've Worked
-        </h2>
-        <div className="h-px bg-gradient-to-r from-border to-transparent flex-1 max-w-xs" />
-      </div>
+    <section className="min-h-screen py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <div className="max-w-[1400px] mx-auto">
+        {/* Massive Section Title */}
+        <div className="mb-32">
+          <TextReveal 
+            text="CAREER." 
+            className="pb-8"
+            textClassName="text-[12vw] md:text-[10rem] font-bold uppercase tracking-tighter leading-[0.8] bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800 dark:from-gray-600 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent pb-4"
+          />
+          <div className="h-px w-full bg-border" />
+        </div>
 
-      <div className="experience-content flex flex-col md:flex-row gap-4 md:gap-8">
-        <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-b md:border-b-0 md:border-l-2 border-border h-fit">
+        {/* Timeline List */}
+        <div className="flex flex-col">
           {experiences.map((exp, index) => (
-            <button
+            <motion.div
               key={exp.company}
-              onClick={() => setActiveTab(index)}
-              className={cn(
-                "px-4 py-3 text-sm font-mono text-left whitespace-nowrap transition-all duration-300 relative",
-                "hover:bg-primary/5 hover:text-primary",
-                activeTab === index ? "text-primary bg-primary/5" : "text-muted-foreground",
-              )}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="group relative grid grid-cols-1 md:grid-cols-12 py-16 border-b border-border hover:bg-secondary/10 transition-colors duration-500 px-4 md:px-8 -mx-4 md:-mx-8 rounded-xl"
             >
-              {activeTab === index && (
-                <span className="absolute bottom-0 left-0 w-full h-0.5 md:w-0.5 md:h-full md:top-0 bg-primary" />
-              )}
-              {exp.company}
-            </button>
+              {/* Period */}
+              <div className="md:col-span-3 mb-4 md:mb-0">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground group-hover:text-foreground transition-colors">
+                  {exp.period}
+                </span>
+              </div>
+
+              {/* Company & Role */}
+              <div className="md:col-span-5 flex flex-col gap-2">
+                <FadeIn delay={0.1}>
+                  <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tight text-foreground">
+                    {exp.company}
+                  </h2>
+                </FadeIn>
+                <FadeIn delay={0.2}>
+                  <span className="text-sm font-mono uppercase tracking-widest text-muted-foreground group-hover:text-foreground transition-colors">
+                    {exp.role}
+                  </span>
+                </FadeIn>
+              </div>
+
+              {/* Description */}
+              <FadeIn delay={0.3} className="md:col-span-4 mt-6 md:mt-0">
+                <p className="text-sm md:text-base leading-relaxed text-muted-foreground max-w-sm">
+                  {exp.description}
+                </p>
+                <div className="mt-6 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-border group-hover:bg-foreground rounded-full transition-colors" />
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground group-hover:text-foreground transition-colors">
+                    {exp.location}
+                  </span>
+                </div>
+              </FadeIn>
+            </motion.div>
           ))}
         </div>
 
-        <div className="py-2 md:py-0 min-h-[320px] flex-1" ref={contentRef}>
-          <h3 className="text-xl font-semibold text-foreground">
-            {experiences[activeTab].role} <span className="text-primary">@ {experiences[activeTab].company}</span>
-          </h3>
-          <p className="font-mono text-sm text-muted-foreground mt-1 mb-6">{experiences[activeTab].period}</p>
-          <ul className="space-y-3">
-            {experiences[activeTab].description.map((item, index) => (
-              <li key={index} className="job-item flex gap-3 text-muted-foreground leading-relaxed">
-                <span className="text-primary mt-1.5 flex-shrink-0">▹</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-wrap gap-2 mt-6">
-            {experiences[activeTab].technologies.map((tech) => (
-              <span
-                key={tech}
-                className="tech-tag px-3 py-1 text-xs font-mono bg-primary/10 text-primary rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 cursor-default"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+        {/* Navigation Buttons */}
+        <div className="mt-48 flex flex-col md:flex-row items-center justify-between gap-12 pt-12 border-t border-border">
+          <a
+            href="/about"
+            className="inline-flex items-center gap-4 text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground hover:text-foreground transition-all duration-300 group"
+          >
+            <span className="w-8 h-px bg-muted-foreground group-hover:w-12 group-hover:bg-foreground transition-all duration-300" />
+            Back to Profile
+          </a>
+
+          <a href="/contact">
+            <MagneticEffect>
+              <button className="px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all duration-300">
+                <div className="flex items-center gap-2">
+                  <span>Discuss a Project</span>
+                  <ArrowUpRight01Icon size={16} />
+                </div>
+              </button>
+            </MagneticEffect>
+          </a>
         </div>
       </div>
     </section>

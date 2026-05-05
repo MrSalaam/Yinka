@@ -1,0 +1,42 @@
+[
+  {
+    "id": "01",
+    "title": "Admin Dashboard Learnille",
+    "category": "Dashboard",
+    "year": "2025-2026",
+    "description": "An admin dashboard for managing students, courses, and consultations, on Learnille.",
+    "link": "https://admin-dev.learnille.com/"
+  },
+  {
+    "id": "02",
+    "title": "SA AYILARA",
+    "category": "Portfolio Website",
+    "year": "2025",
+    "description": "Portfolio Website for S.A Ayilara, a brand designer in Nigeria.",
+    "link": "https://sodiqayilara.site"
+  },
+  {
+    "id": "03",
+    "title": "Dashboard",
+    "category": "UI Design",
+    "year": "2025-2026",
+    "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
+    "link": "https://consultation.staging.learnille.com/"
+  },
+  {
+    "id": "04",
+    "title": "Learnille Landing Page",
+    "category": "Website",
+    "year": "2025-2026",
+    "description": "Landing page for Learnille.",
+    "link": "https://staging.learnille.com/"
+  },
+  {
+    "id": "05",
+    "title": "PrintDaily",
+    "category": "Website",
+    "year": "2025",
+    "description": "PrintDaily provides high-quality printing services for businesses and individuals.",
+    "link": "https://www.printdaily.com.ng/"
+  }
+]

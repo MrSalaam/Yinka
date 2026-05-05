@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Olayinka Salaam\\Downloads\\Compressed\\yinka",
+    "outputFileTracingRoot": "C:\\Users\\olayi\\Desktop\\Yinka",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -157,7 +157,7 @@
       "proxyPrefetch": "flexible",
       "optimisticClientCache": true,
       "manualClientBasePath": false,
-      "cpus": 3,
+      "cpus": 7,
       "memoryBasedWorkersCount": false,
       "imgOptConcurrency": null,
       "imgOptTimeoutInSeconds": 7,
@@ -289,11 +289,11 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "C:\\Users\\Olayinka Salaam\\Downloads\\Compressed\\yinka"
+      "root": "C:\\Users\\olayi\\Desktop\\Yinka"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "C:\\Users\\Olayinka Salaam\\Downloads\\Compressed\\yinka",
+  "appDir": "C:\\Users\\olayi\\Desktop\\Yinka",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

@@ -1,0 +1,23 @@
+[ {
+    "company": "MIC",
+    "role": "Frontend Developer Intern",
+    "period": "2024",
+    "location": "IBADAN, OYO STATE",
+    "description": "Engineered responsive systems and collaborated with cross-functional teams to build accessible, pixel-perfect user experiences."
+  },
+  {
+    "company": "Learnille",
+    "role": "Frontend Developer",
+    "period": "2025 — PRESENT",
+    "location": "REMOTE",
+    "description": "Leading the architectural evolution of core dashboard systems, focusing on atomic design principles and performance optimization at scale."
+  },
+  {
+    "company": "RAJ Consulting",
+    "role": "Frontend Developer Intern",
+    "period": "2025- PRESENT",
+    "location": "REMOTE",
+    "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+  }
+ 
+]

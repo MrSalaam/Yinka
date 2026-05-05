@@ -4,85 +4,35 @@ import { useState, useEffect } from "react"
 
 export function LoadingScreen({ onLoadingComplete }: { onLoadingComplete: () => void }) {
   const [progress, setProgress] = useState(0)
-  const [text, setText] = useState("")
-  const fullText = "Loading portfolio..."
 
   useEffect(() => {
-    // Typing animation
-    let charIndex = 0
-    const typingInterval = setInterval(() => {
-      if (charIndex <= fullText.length) {
-        setText(fullText.slice(0, charIndex))
-        charIndex++
-      } else {
-        clearInterval(typingInterval)
-      }
-    }, 80)
-
-    // Progress animation
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(progressInterval)
-          setTimeout(onLoadingComplete, 500)
+          // Add a tiny delay so the user sees "100" before it disappears
+          setTimeout(onLoadingComplete, 400)
           return 100
         }
-        return prev + Math.random() * 15
+        // Increment randomly between 2 and 15
+        return prev + Math.floor(Math.random() * 14) + 2
       })
-    }, 150)
+    }, 80)
 
     return () => {
-      clearInterval(typingInterval)
       clearInterval(progressInterval)
     }
   }, [onLoadingComplete])
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background">
-      <div className="relative z-10 flex flex-col items-center gap-8">
-      
-
-        {/* Terminal-style text */}
-        <div className="flex flex-col items-center gap-4">
-          <div className="rounded-lg border border-border bg-card px-6 py-3 font-mono shadow-lg">
-            <span className="text-primary">$ </span>
-            <span className="text-foreground">{text}</span>
-            <span className="animate-pulse text-primary">|</span>
-          </div>
-
-          {/* Progress bar */}
-          <div className="relative h-2 w-64 overflow-hidden rounded-full bg-secondary">
-            <div
-              className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-primary to-accent transition-all duration-300 ease-out"
-              style={{ width: `${Math.min(progress, 100)}%` }}
-            />
-            {/* Shimmer effect on progress bar */}
-            <div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-              style={{
-                animation: "shimmer 1.5s infinite",
-                backgroundSize: "200% 100%",
-              }}
-            />
-          </div>
-
-          {/* Progress percentage */}
-          <span className="font-mono text-sm text-muted-foreground">{Math.min(Math.round(progress), 100)}%</span>
-        </div>
-
-        {/* Loading indicators */}
-        <div className="flex gap-2">
-          {[0, 1, 2].map((i) => (
-            <div
-              key={i}
-              className="h-2 w-2 rounded-full bg-primary"
-              style={{
-                animation: "bounce-subtle 1s ease-in-out infinite",
-                animationDelay: `${i * 0.15}s`,
-              }}
-            />
-          ))}
-        </div>
+      <div className="relative z-10 flex items-baseline gap-2">
+        <span className="text-[30vw] md:text-[20rem] font-bold tracking-tighter tabular-nums leading-none bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800 dark:from-gray-600 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent">
+          {Math.min(progress, 100)}
+        </span>
+        <span className="text-4xl md:text-6xl font-bold bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800 dark:from-gray-600 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent opacity-50 mb-4 md:mb-12">
+          %
+        </span>
       </div>
     </div>
   )
