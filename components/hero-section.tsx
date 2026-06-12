@@ -102,7 +102,7 @@ export function HeroSection() {
           >
             {[...Array(6)].map((_, i) => (
               <h2 key={i} className="text-[15vw] md:text-[12vw] font-bold uppercase tracking-[0.1em] leading-none pr-24">
-                Frontend Developer
+                Olayinka Salaam
               </h2>
             ))}
           </motion.div>
