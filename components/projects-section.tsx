@@ -64,19 +64,46 @@ export function ProjectsSection() {
                     <div className="flex flex-col gap-4 max-w-4xl">
                       <div className="flex items-center gap-4">
                         <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">{project.category}</span>
+                        {"status" in project && project.status && (
+                          <span className="px-2.5 py-1 rounded-full border border-foreground/30 text-[9px] font-black uppercase tracking-widest text-foreground flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-foreground animate-pulse inline-block" />
+                            {project.status as string}
+                          </span>
+                        )}
                       </div>
                       
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="group/title inline-block">
-                        <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter leading-tight bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800 dark:from-gray-600 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent group-hover/title:opacity-70 transition-opacity">
+                      {project.link !== "#" ? (
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="group/title inline-block">
+                          <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter leading-tight bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800 dark:from-gray-600 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent group-hover/title:opacity-70 transition-opacity">
+                            {project.title}
+                          </h2>
+                        </a>
+                      ) : (
+                        <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter leading-tight bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800 dark:from-gray-600 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent">
                           {project.title}
                         </h2>
-                      </a>
+                      )}
                       
                       <FadeIn delay={0.2}>
                         <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
                           {project.description}
                         </p>
                       </FadeIn>
+
+                      {project.tools && project.tools.length > 0 && (
+                        <FadeIn delay={0.25}>
+                          <div className="flex flex-wrap gap-2 mt-2">
+                            {project.tools.map((tool) => (
+                              <span
+                                key={tool}
+                                className="px-2.5 py-1 rounded-full border border-border text-[9px] font-bold uppercase tracking-widest text-muted-foreground"
+                              >
+                                {tool}
+                              </span>
+                            ))}
+                          </div>
+                        </FadeIn>
+                      )}
                     </div>
 
                     <div className="flex flex-col items-start md:items-end gap-6">
@@ -84,15 +111,28 @@ export function ProjectsSection() {
                         <span>{project.year}</span>
                       </FadeIn>
                       
-                      <a 
-                        href={project.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-[10px] font-bold uppercase tracking-widest hover:bg-foreground hover:text-background transition-all"
-                      >
-                        <span>Visit Site</span>
-                        <ArrowUpRight01Icon size={12} />
-                      </a>
+                      {project.link !== "#" && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-[10px] font-bold uppercase tracking-widest hover:bg-foreground hover:text-background transition-all"
+                        >
+                          <span>Visit Site</span>
+                          <ArrowUpRight01Icon size={12} />
+                        </a>
+                      )}
+                      {"adminLink" in project && project.adminLink && (
+                        <a
+                          href={project.adminLink as string}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-[10px] font-bold uppercase tracking-widest hover:bg-foreground hover:text-background transition-all"
+                        >
+                          <span>Admin</span>
+                          <ArrowUpRight01Icon size={12} />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </motion.div>

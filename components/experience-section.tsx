@@ -26,7 +26,7 @@ export function ExperienceSection() {
         <div className="flex flex-col">
           {experiences.map((exp, index) => (
             <motion.div
-              key={exp.company}
+              key={`${exp.company}-${index}`}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}

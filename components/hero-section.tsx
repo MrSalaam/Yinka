@@ -50,21 +50,33 @@ export function HeroSection() {
       <section className="min-h-screen flex flex-col justify-center items-center relative px-4 md:px-0">
         <div className="flex flex-col items-start text-left space-y-8 w-full max-w-7xl mx-auto px-6 lg:px-12 z-20 relative">
 
-          <TextReveal 
-            text="Pristine Web Architect." 
+          <TextReveal
+            text="Frontend Engineer."
             className="max-w-none pb-4"
             textClassName="text-6xl md:text-8xl lg:text-9xl uppercase font-bold tracking-tighter leading-none bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800 dark:from-gray-600 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent pb-4"
           />
 
-          <FadeIn delay={0.6}>
-            <div className="pt-8 flex flex-col sm:flex-row items-center gap-6">
+          <FadeIn delay={0.5}>
+            <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
+              I craft fast, polished web interfaces and when the project calls for it, I can take it full-stack too.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.7}>
+            <div className="pt-4 flex flex-col sm:flex-row items-center gap-6">
               <a href="/projects" onClick={handleNavigate}>
                 <MagneticEffect>
                   <GlossyButton className="flex items-center gap-2">
-                    <span>View Exhibition</span>
+                    <span>View My Work</span>
                     <ArrowUpRight01Icon size={18} />
                   </GlossyButton>
                 </MagneticEffect>
+              </a>
+              <a
+                href="/contact"
+                className="text-[11px] font-bold uppercase tracking-[0.25em] text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-2"
+              >
+                Hire Me <ArrowUpRight01Icon size={14} />
               </a>
             </div>
           </FadeIn>

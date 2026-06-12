@@ -1,4 +1,5 @@
-[ {
+[
+  {
     "company": "MIC",
     "role": "Frontend Developer Intern",
     "period": "2024",
@@ -6,18 +7,45 @@
     "description": "Engineered responsive systems and collaborated with cross-functional teams to build accessible, pixel-perfect user experiences."
   },
   {
+    "company": "RAJ Consulting",
+    "role": "Frontend Developer Intern",
+    "period": "2025",
+    "location": "REMOTE",
+    "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+  },
+  {
     "company": "Learnille",
     "role": "Frontend Developer",
-    "period": "2025 — PRESENT",
+    "period": "2025 — 2026",
     "location": "REMOTE",
     "description": "Leading the architectural evolution of core dashboard systems, focusing on atomic design principles and performance optimization at scale."
   },
   {
-    "company": "RAJ Consulting",
-    "role": "Frontend Developer Intern",
-    "period": "2025- PRESENT",
+    "company": "MentorMatch",
+    "role": "Full-Stack Developer",
+    "period": "2025 — 2026",
     "location": "REMOTE",
-    "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
+    "description": "Built a full-stack platform that connects students with mentors — designed and developed the matching algorithm interface, onboarding flows, mentorship dashboards, backend API, and database end to end."
+  },
+  {
+    "company": "Freelance",
+    "role": "Full-Stack Developer",
+    "period": "2026",
+    "location": "Ilorin, Kwara State",
+    "description": "Built an Alumni Portal System for the Dept. of Information Technology, University of Ilorin."
+  },
+  {
+    "company": "Freelance",
+    "role": "Full-Stack Developer",
+    "period": "2026",
+    "location": "Remote",
+    "description": "Designed and developed a full-stack consultation website with an admin dashboard — built the backend API, database, and a clean interface for managing bookings and client interactions."
+  },
+  {
+    "company": "Basal Labs",
+    "role": "Frontend Engineer",
+    "period": "2026 — PRESENT",
+    "location": "REMOTE",
+    "description": "Building polished, performant web products at a tech agency startup that delivers across the full spectrum of digital — from SaaS platforms and dashboards to landing pages and mobile-ready applications."
   }
- 
 ]

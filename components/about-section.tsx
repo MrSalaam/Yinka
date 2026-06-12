@@ -20,15 +20,15 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24">
           <FadeIn className="lg:col-span-8">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1] mb-12">
-              Building digital products that balance <span className="text-muted-foreground italic font-serif">aesthetic rigor</span> with technical excellence.
+              Building interfaces that feel as good as they <span className="text-muted-foreground italic font-serif">look.</span>
             </h2>
-            
+
             <div className="flex flex-col gap-8 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
               <p>
-                I am Olayinka Salaam, a Senior Frontend Architect specializing in the construction of pristine user interfaces and high-performance web systems. My approach is rooted in the belief that software should be as beautiful on the inside as it is on the outside.
+                I am Olayinka Salaam, a Senior Frontend Engineer specializing in React, Next.js, and TypeScript. I turn designs into fast, accessible, production-grade interfaces that users actually enjoy using.
               </p>
               <p>
-                With a deep focus on the React ecosystem, I have collaborated with forward-thinking startups and established organizations to engineer accessible, performant, and enduring digital experiences.
+                My primary focus is the frontend but I can go further when needed. I have built and integrated backends, APIs, and databases to ship complete web applications end to end for startups in real estate, edtech, and e-commerce.
               </p>
             </div>
           </FadeIn>
@@ -39,29 +39,13 @@ export function AboutSection() {
                 Specialization
               </h3>
               <ul className="flex flex-col gap-3 font-mono text-xs uppercase tracking-widest text-foreground">
-                <li>System Architecture</li>
                 <li>Frontend Engineering</li>
                 <li>Interface Design</li>
                 <li>Design Systems</li>
+                <li>System Architecture</li>
+                <li>Full-Stack Capability</li>
               </ul>
             </FadeIn>
-
-            <FadeIn delay={0.3} className="space-y-6">
-              <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-muted-foreground border-b border-border pb-4">
-                Technical Stack
-              </h3>
-              <ul className="flex flex-col gap-3 font-mono text-xs uppercase tracking-widest text-foreground">
-                <li>TypeScript / JavaScript</li>
-                <li>Next.js / React</li>
-                <li>Tailwind CSS</li>
-                <li>Framer Motion</li>
-                <li>TanStack Query</li>
-                <li>shadcn/ui</li>
-                <li>Chakra UI</li>
-              </ul>
-            </FadeIn>
-
-           
           </div>
         </div>
 

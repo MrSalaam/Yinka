@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes"
 import "./globals.css"
 
 import { SmoothScroll } from "@/components/smooth-scroll"
+import { Nav } from "@/components/nav"
 
 export default function RootLayout({
   children,
@@ -28,6 +29,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <Nav />
           <SmoothScroll>
             {children}
           </SmoothScroll>

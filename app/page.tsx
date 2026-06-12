@@ -25,11 +25,11 @@ export default function Home() {
   // Konami code easter egg
   useKonamiCode(() => {
     setShowConfetti(true)
-    console.log("%c🎉 KONAMI CODE ACTIVATED! 🎉", "color: #ec5a00; font-size: 24px; font-weight: bold;")
+    console.log("%c🎉 KONAMI CODE ACTIVATED! 🎉", "color: #111111; font-size: 24px; font-weight: bold;")
     console.log("%cYou found the secret! You're clearly a developer of culture 🎮", "color: #666; font-size: 14px;")
 
     // Create confetti effect
-    const colors = ["#ec5a00", "#ff7f50", "#ffa500", "#ffb347"]
+    const colors = ["#111111", "#555555", "#888888", "#bbbbbb"]
     for (let i = 0; i < 100; i++) {
       setTimeout(() => {
         const confetti = document.createElement("div")

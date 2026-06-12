@@ -5,38 +5,63 @@
     "category": "Dashboard",
     "year": "2025-2026",
     "description": "An admin dashboard for managing students, courses, and consultations, on Learnille.",
-    "link": "https://admin-dev.learnille.com/"
+    "link": "https://admin-dev.learnille.com/",
+    "tools": ["React", "TypeScript", "Chakra UI", "TanStack Query"]
   },
   {
     "id": "02",
-    "title": "SA AYILARA",
-    "category": "Portfolio Website",
-    "year": "2025",
-    "description": "Portfolio Website for S.A Ayilara, a brand designer in Nigeria.",
-    "link": "https://sodiqayilara.site"
+    "title": "Buttersend",
+    "category": "SaaS Platform",
+    "year": "2026",
+    "status": "In Development",
+    "description": "A customer support SaaS dashboard for businesses to manage customer communication across multiple channels. Features a live chat widget, support ticket system, conversations inbox, CRM contacts, broadcasts, AI agent, automations, analytics, team management, and billing — built full-stack as a single Next.js application.",
+    "link": "#",
+    "tools": ["Next.js", "TypeScript", "Tailwind CSS", "TanStack Query", "Prisma", "PostgreSQL", "Socket.io", "better-auth"]
   },
   {
     "id": "03",
+    "title": "Dedwell",
+    "category": "Real Estate Platform",
+    "year": "2026",
+    "description": "A full-scale real estate platform for Canadian citizens to find homes and explore the property marketplace. Includes a public-facing homepage, user property portal, and a separate admin dashboard for managing listings and operations.",
+    "link": "https://dedwell-user-website.vercel.app/",
+    "adminLink": "https://dedwell-admin-dashboard-bice.vercel.app/login",
+    "tools": ["Next.JS", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "id": "04",
     "title": "Dashboard",
     "category": "UI Design",
     "year": "2025-2026",
     "description": "Redesign of Consultant, Student, Instructor dashboards for Learnille.",
-    "link": "https://consultation.staging.learnille.com/"
+    "link": "https://consultation.staging.learnille.com/",
+    "tools": ["React", "TypeScript", "Chakra UI", "TanStack Query"]
   },
   {
-    "id": "04",
+    "id": "05",
     "title": "Learnille Landing Page",
     "category": "Website",
     "year": "2025-2026",
     "description": "Landing page for Learnille.",
-    "link": "https://staging.learnille.com/"
+    "link": "https://staging.learnille.com/",
+    "tools": ["Next.JS", "TypeScript", "Tailwind CSS"]
   },
   {
-    "id": "05",
+    "id": "06",
     "title": "PrintDaily",
     "category": "Website",
     "year": "2025",
     "description": "PrintDaily provides high-quality printing services for businesses and individuals.",
-    "link": "https://www.printdaily.com.ng/"
+    "link": "https://www.printdaily.com.ng/",
+    "tools": ["Next.JS", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "id": "07",
+    "title": "SA AYILARA",
+    "category": "Portfolio Website",
+    "year": "2025",
+    "description": "Portfolio Website for S.A Ayilara, a brand designer in Nigeria.",
+    "link": "https://sodiqayilara.site",
+    "tools": ["Next.JS", "TypeScript", "Tailwind CSS"]
   }
 ]
