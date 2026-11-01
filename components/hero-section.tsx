@@ -43,7 +43,7 @@ function GreetingLine({ ready }: { ready: boolean }) {
   const g = greetings[index]
 
   return (
-    <div className="h-7 overflow-hidden" aria-label="Hello">
+    <div className="h-7 overflow-hidden" aria-hidden="true">
       <AnimatePresence mode="popLayout" initial={false}>
         {ready && (
           <motion.p
@@ -93,6 +93,7 @@ export function HeroSection({ ready = true }: { ready?: boolean }) {
     <div ref={rootRef}>
     <div className="relative isolate min-h-screen w-full overflow-hidden bg-[radial-gradient(ellipse_70%_60%_at_20%_30%,rgba(0,0,0,0.05),transparent),radial-gradient(ellipse_60%_55%_at_80%_70%,rgba(0,0,0,0.06),transparent)]">
       <section id="home" className="relative flex min-h-screen flex-col justify-center px-6 pb-28 pt-28 lg:px-12">
+        <h1 className="sr-only">Olayinka Salaam, website developer in Lagos, Nigeria. I build the whole thing: fast websites, solid APIs and the database underneath.</h1>
         <div className="mx-auto w-full max-w-7xl">
           {/* Left: positioning */}
           <div className="flex flex-col items-start gap-8">
@@ -114,8 +115,8 @@ export function HeroSection({ ready = true }: { ready?: boolean }) {
 
             <FadeIn delay={0.5}>
               <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                <span className="font-medium text-foreground">I&apos;m Olayinka Salaam, I build web apps</span> from the interface
-                people touch to the APIs and database behind it. Based in Lagos, building with teams anywhere.
+                <span className="font-medium text-foreground">I&apos;m Olayinka Salaam, a website developer in Lagos.</span> I build websites and
+                web apps, from the interface people touch to the APIs and database behind it, for teams anywhere.
               </p>
             </FadeIn>
 

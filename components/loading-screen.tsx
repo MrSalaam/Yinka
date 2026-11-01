@@ -14,7 +14,7 @@ export function LoadingScreen({ onLoadingComplete }: { onLoadingComplete: () => 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background px-6">
-      <h1 className="w-full max-w-4xl text-left text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-7xl">
+      <p className="w-full max-w-4xl text-left text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-7xl">
         <BackspaceText
           text={LINES}
           loop={false}
@@ -24,7 +24,7 @@ export function LoadingScreen({ onLoadingComplete }: { onLoadingComplete: () => 
           delay={250}
           onComplete={handleComplete}
         />
-      </h1>
+      </p>
     </div>
   )
 }

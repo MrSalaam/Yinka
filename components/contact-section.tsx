@@ -5,6 +5,8 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
 import { ArrowUpRight01Icon } from "hugeicons-react"
+import { whenNear } from "@/lib/when-near"
+import { canRender3D } from "@/lib/gpu"
 
 /* ────────────────────────────────────────────────────────────────────────────
  * Connect: a dark finale. A field of particles ripples under the pointer
@@ -92,8 +94,8 @@ export function ContactSection() {
       const rule = section.querySelector("[data-rule]")
       const info = gsap.utils.toArray<HTMLElement>("[data-info]", section)
 
-      const lineChars = lines.map((l) => SplitText.create(l, { type: "chars" }).chars)
-      const emailChars = emailEl ? SplitText.create(emailEl, { type: "chars" }).chars : []
+      const lineChars = lines.map((l) => SplitText.create(l, { type: "chars", aria: "none" }).chars)
+      const emailChars = emailEl ? SplitText.create(emailEl, { type: "chars", aria: "none" }).chars : []
 
       gsap.set(lineChars.flat(), { yPercent: 115, rotate: 6 })
       gsap.set(emailChars, { yPercent: 115 })
@@ -138,9 +140,13 @@ export function ContactSection() {
     let cleanup = () => {}
 
     ;(async () => {
-      const THREE = await import("three")
+      if (!canRender3D()) return // no graphics acceleration (or a robot): skip the 3D, the page works without it
       const host = hostRef.current
-      if (disposed || !host) return
+      if (!host) return
+      await whenNear(host)
+      if (disposed) return
+      const THREE = await import("three")
+      if (disposed) return
 
       let renderer: InstanceType<typeof THREE.WebGLRenderer>
       try {
@@ -282,7 +288,7 @@ export function ContactSection() {
         </h2>
 
         <div className="mt-14">
-          <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">Inquiries</p>
+          <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">Inquiries</p>
           <a
             data-email-link
             href={`mailto:${EMAIL}`}
@@ -299,7 +305,7 @@ export function ContactSection() {
 
         <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-3">
           <div data-info>
-            <h3 className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">Social</h3>
+            <h3 className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">Social</h3>
             <ul className="flex flex-col gap-2">
               {SOCIALS.map((s) => (
                 <li key={s.label}>
@@ -318,7 +324,7 @@ export function ContactSection() {
           </div>
 
           <div data-info>
-            <h3 className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">Location</h3>
+            <h3 className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">Location</h3>
             <p className="text-xs font-bold uppercase leading-relaxed tracking-widest text-white/80">
               Lagos, Nigeria
               <br />
@@ -327,10 +333,10 @@ export function ContactSection() {
           </div>
 
           <div data-info>
-            <h3 className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">Local time</h3>
+            <h3 className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">Local time</h3>
             <p className="font-mono text-2xl tabular-nums text-white/90" suppressHydrationWarning>
               {time || "--:--"}
-              <span className="ml-3 text-[10px] uppercase tracking-[0.3em] text-white/40">GMT +1</span>
+              <span className="ml-3 text-[10px] uppercase tracking-[0.3em] text-white/60">GMT +1</span>
             </p>
           </div>
         </div>

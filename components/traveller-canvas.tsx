@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { traveller } from "@/lib/traveller-store"
+import { whenIdle } from "@/lib/when-near"
+import { canRender3D } from "@/lib/gpu"
 
 /* ────────────────────────────────────────────────────────────────────────────
  * The traveller: one liquid-chrome object that lives in a fixed layer above the
@@ -168,9 +170,13 @@ export function TravellerCanvas() {
     let cleanup = () => {}
 
     ;(async () => {
-      const THREE = await import("three")
+      if (!canRender3D()) return // no graphics acceleration (or a robot): skip the 3D, the page works without it
       const host = hostRef.current
-      if (disposed || !host) return
+      if (!host) return
+      await whenIdle()
+      if (disposed) return
+      const THREE = await import("three")
+      if (disposed) return
 
       let renderer: InstanceType<typeof THREE.WebGLRenderer>
       try {

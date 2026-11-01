@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { traveller } from "@/lib/traveller-store"
+import { whenNear } from "@/lib/when-near"
+import { canRender3D } from "@/lib/gpu"
 
 /* ────────────────────────────────────────────────────────────────────────────
  * About: a 3D type fly-through, on a soft light ground.
@@ -111,9 +113,10 @@ export function AboutSection() {
   const [reduced, setReduced] = useState(false)
 
   useEffect(() => {
+    // "Reduced" here means: no pinned 3D sequence, just the statements as plain type
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
-    setReduced(mq.matches)
-    const onChange = (e: MediaQueryListEvent) => setReduced(e.matches)
+    setReduced(mq.matches || !canRender3D())
+    const onChange = (e: MediaQueryListEvent) => setReduced(e.matches || !canRender3D())
     mq.addEventListener("change", onChange)
     return () => mq.removeEventListener("change", onChange)
   }, [])
@@ -168,9 +171,13 @@ export function AboutSection() {
     let cleanup = () => {}
 
     ;(async () => {
-      const THREE = await import("three")
+      if (!canRender3D()) return // no graphics acceleration (or a robot): skip the 3D, the page works without it
       const host = hostRef.current
-      if (disposed || !host) return
+      if (!host) return
+      await whenNear(host)
+      if (disposed) return
+      const THREE = await import("three")
+      if (disposed) return
 
       let renderer: InstanceType<typeof THREE.WebGLRenderer>
       try {
@@ -372,6 +379,7 @@ export function AboutSection() {
 
       {/* The statements are drawn on canvas, so screen readers get the same words as text */}
       <div className="sr-only">
+        <h2>About Olayinka Salaam</h2>
         {STATEMENTS.map((st) => (
           <p key={st.label}>
             {st.head} {st.sub}

@@ -5,11 +5,11 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      { source: "/about", destination: "/#about", permanent: false },
-      { source: "/stack", destination: "/#stack", permanent: false },
-      { source: "/projects", destination: "/#works", permanent: false },
-      { source: "/experience", destination: "/#career", permanent: false },
-      { source: "/contact", destination: "/#contact", permanent: false },
+      { source: "/about", destination: "/#about", permanent: true },
+      { source: "/stack", destination: "/#stack", permanent: true },
+      { source: "/projects", destination: "/#works", permanent: true },
+      { source: "/experience", destination: "/#career", permanent: true },
+      { source: "/contact", destination: "/#contact", permanent: true },
     ]
   },
   images: {

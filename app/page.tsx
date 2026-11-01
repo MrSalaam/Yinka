@@ -10,6 +10,9 @@ import { ContactSection } from "../components/contact-section"
 import { SectionStack } from "../components/section-stack"
 import { TravellerCanvas } from "../components/traveller-canvas"
 import { traveller } from "../lib/traveller-store"
+import { canRender3D } from "../lib/gpu"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Footer } from "../components/footer"
 import { LoadingScreen } from "../components/loading-screen"
 import { useKonamiCode } from "../hooks/use-konami-code"
@@ -20,14 +23,45 @@ const FLY_OUT = [true, false, false, false, false, false]
 const PULL_UP = [false, false, false, true, false, false]
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true)
-  const [showContent, setShowContent] = useState(false)
+  // "loading": the typing screen covers the page. "leaving": it fades out. "done": gone.
+  // The page itself is always in the HTML and never hidden, so search engines read all of it.
+  const [phase, setPhase] = useState<"loading" | "leaving" | "done">("loading")
   const [showConfetti, setShowConfetti] = useState(false)
+  const showContent = phase !== "loading"
+  // True when About falls back to plain type (no 3D, or reduced motion): then Stack must not be pulled up under it
+  const [plainAbout, setPlainAbout] = useState(false)
 
   const handleLoadingComplete = () => {
-    setIsLoading(false)
-    setTimeout(() => setShowContent(true), 100)
+    try {
+      sessionStorage.setItem("seen-intro", "1")
+    } catch {}
+    setPhase("leaving")
+    setTimeout(() => setPhase("done"), 700)
   }
+
+  useEffect(() => {
+    const plain = window.matchMedia("(prefers-reduced-motion: reduce)").matches || !canRender3D()
+    if (plain) {
+      setPlainAbout(true)
+      // The layout changed, so the scroll positions need recalculating
+      requestAnimationFrame(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        ScrollTrigger.refresh()
+      })
+    }
+  }, [])
+
+  // Skip the intro for search-engine bots and speed tests, for reduced motion,
+  // and when it has already played in this browser session
+  useEffect(() => {
+    let skip =
+      /bot|crawl|spider|lighthouse|pagespeed|gtmetrix|headless/i.test(navigator.userAgent) ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    try {
+      skip = skip || sessionStorage.getItem("seen-intro") === "1"
+    } catch {}
+    if (skip) setPhase("done")
+  }, [])
 
   // The shared 3D layer waits for the loading screen to finish
   useEffect(() => {
@@ -73,14 +107,16 @@ export default function Home() {
 
   return (
     <>
-      {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
-      <div
-        className={`relative min-h-screen transition-opacity duration-700 ${showContent ? "opacity-100" : "opacity-0"}`}
-      >
+      {phase !== "done" && (
+        <div className={`fixed inset-0 z-50 transition-opacity duration-700 ${phase === "leaving" ? "pointer-events-none opacity-0" : "opacity-100"}`}>
+          <LoadingScreen onLoadingComplete={handleLoadingComplete} />
+        </div>
+      )}
+      <div className="relative min-h-screen">
 
         <main>
           {/* Order: Hero, Works, About, Stack, Career, Connect. Hero flies out into Works (which has its own pinned card deck); About flies out into Stack from inside its own pin */}
-          <SectionStack flyOut={FLY_OUT} pullUp={PULL_UP}>
+          <SectionStack flyOut={FLY_OUT} pullUp={plainAbout ? [] : PULL_UP}>
             <HeroSection ready={showContent} />
             <ProjectsSection />
             <AboutSection />

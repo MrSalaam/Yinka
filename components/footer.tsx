@@ -28,7 +28,7 @@ export function Footer() {
         const word = footerRef.current!.querySelector<HTMLElement>("[data-wordmark]")
         const bar = gsap.utils.toArray<HTMLElement>("[data-bar]", footerRef.current)
         if (!word) return
-        const chars = SplitText.create(word, { type: "chars" }).chars
+        const chars = SplitText.create(word, { type: "chars", aria: "none" }).chars
         gsap.set(chars, { yPercent: 110 })
         gsap.set(bar, { autoAlpha: 0, y: 16 })
         gsap
@@ -45,7 +45,7 @@ export function Footer() {
   return (
     <footer ref={footerRef} className="overflow-hidden bg-[#0a0a0a] px-6 pb-8 pt-4 text-white md:px-16 lg:px-24">
       {/* The wordmark: outlined, so it reads as a quiet signature */}
-      <div className="overflow-hidden pb-[0.04em]" aria-label="Olayinka Salaam">
+      <div role="img" className="overflow-hidden pb-[0.04em]" aria-label="Olayinka Salaam">
         <p
           data-wordmark
           aria-hidden="true"

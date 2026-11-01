@@ -5,6 +5,8 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
 import experiences from "../data/experience.json"
+import { whenNear } from "@/lib/when-near"
+import { canRender3D } from "@/lib/gpu"
 
 /* ────────────────────────────────────────────────────────────────────────────
  * Career: a pinned journey. A line winds through 3D space with one node per
@@ -112,7 +114,7 @@ export function ExperienceSection() {
 
       // Each job writes itself in as the camera reaches its node
       beats.forEach((beat, i) => {
-        const chars = SplitText.create(beat.querySelector("[data-company]") as HTMLElement, { type: "chars" }).chars
+        const chars = SplitText.create(beat.querySelector("[data-company]") as HTMLElement, { type: "chars", aria: "none" }).chars
         const rest = beat.querySelectorAll("[data-rest]")
         const inAt = STEP * i - 1.4
         const outAt = STEP * i + 1.1
@@ -140,9 +142,13 @@ export function ExperienceSection() {
     let cleanup = () => {}
 
     ;(async () => {
-      const THREE = await import("three")
+      if (!canRender3D()) return // no graphics acceleration (or a robot): skip the 3D, the page works without it
       const host = hostRef.current
-      if (disposed || !host) return
+      if (!host) return
+      await whenNear(host)
+      if (disposed) return
+      const THREE = await import("three")
+      if (disposed) return
 
       let renderer: InstanceType<typeof THREE.WebGLRenderer>
       try {
@@ -326,6 +332,7 @@ export function ExperienceSection() {
 
   return (
     <section id="career" ref={sectionRef} className="relative h-screen w-full overflow-hidden border-t border-border bg-background">
+      <h2 className="sr-only">Career and work experience</h2>
       <div ref={hostRef} aria-hidden="true" className="pointer-events-none absolute inset-0 z-0" />
       {/* Keep the text readable over the path */}
       <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-background via-background/60 to-transparent md:via-background/30" />

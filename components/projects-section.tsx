@@ -6,16 +6,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
 import { ArrowUpRight01Icon } from "hugeicons-react"
 import projectData from "../data/projects.json"
+import { whenNear } from "@/lib/when-near"
+import { canRender3D } from "@/lib/gpu"
 
-/* ────────────────────────────────────────────────────────────────────────────
- * Works: a pinned horizontal scroll, one full-screen panel per project, on black.
- *
- * The section stays put while the track slides sideways. The scroll HOLDS on each
- * project (title, description, tools, links all on screen), then slides to the
- * next, then holds again, so each one is seen before the next arrives. On the
- * right, a cloud of glowing particles (Three.js, the same staggered, swirling shader
- * morph as About) re-forms into a shape for whichever project is in view.
- * ──────────────────────────────────────────────────────────────────────────── */
+
 
 type Project = {
   id: string
@@ -453,7 +447,7 @@ export function ProjectsSection() {
       // Each panel's text writes itself in when the panel arrives
       const reveals = panels.map((panel) => {
         const title = panel.querySelector<HTMLElement>("[data-title]")
-        const chars = title ? SplitText.create(title, { type: "words,chars" }).chars : []
+        const chars = title ? SplitText.create(title, { type: "words,chars", aria: "none" }).chars : []
         const fades = panel.querySelectorAll("[data-fade]")
         gsap.set(chars, { yPercent: 110 })
         gsap.set(fades, { autoAlpha: 0, y: 16 })
@@ -509,9 +503,13 @@ export function ProjectsSection() {
     let cleanup = () => {}
 
     ;(async () => {
-      const THREE = await import("three")
+      if (!canRender3D()) return // no graphics acceleration (or a robot): skip the 3D, the page works without it
       const host = hostRef.current
-      if (disposed || !host) return
+      if (!host) return
+      await whenNear(host)
+      if (disposed) return
+      const THREE = await import("three")
+      if (disposed) return
 
       let renderer: InstanceType<typeof THREE.WebGLRenderer>
       try {
@@ -653,7 +651,7 @@ export function ProjectsSection() {
     }
   }, [reduced])
 
-  /* Reduced motion: no pin, no 3D. The same projects as a plain list. */
+ 
   if (reduced) {
     return (
       <section id="works" className="bg-[#0a0a0a] px-6 py-24 text-white md:px-16 lg:px-24">
@@ -681,9 +679,9 @@ export function ProjectsSection() {
 
   return (
     <section id="works" ref={sectionRef} className="relative h-[100svh] w-full overflow-hidden bg-[#0a0a0a] text-white">
+      <h2 className="sr-only">Selected work: web apps, platforms and websites by Olayinka Salaam</h2>
       <div ref={hostRef} aria-hidden="true" className="pointer-events-none absolute inset-0 z-0" />
 
-      {/* A quiet label, always in view */}
       <div className="pointer-events-none absolute left-6 top-24 z-20 md:left-16 lg:left-24">
         <p className="font-mono text-[12px] font-bold uppercase tracking-[0.3em] text-white/85">Works</p>
       </div>
@@ -694,7 +692,6 @@ export function ProjectsSection() {
         ))}
       </div>
 
-      {/* Progress: a line with a dot per project */}
       <div className="pointer-events-none absolute inset-x-6 bottom-8 z-20 md:inset-x-16 lg:inset-x-24">
         <div className="relative h-px bg-white/15">
           <div data-progress className="h-full origin-left bg-white" style={{ transform: "scaleX(0)" }} />

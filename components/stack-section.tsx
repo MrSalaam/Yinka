@@ -139,7 +139,7 @@ export function StackSection() {
       // Intro: the sentence blurs in word by word, the arrow nudges forward
       const introText = section.querySelector<HTMLElement>("[data-intro-text]")
       if (introText) {
-        const words = SplitText.create(introText, { type: "words" })
+        const words = SplitText.create(introText, { type: "words", aria: "none" })
         gsap.from(words.words, {
           autoAlpha: 0,
           y: 24,
@@ -177,7 +177,7 @@ export function StackSection() {
         })
 
         // On arrival: the text sequence (reverses if you scroll back)
-        const toolSplits = tools.map((t) => SplitText.create(t, { type: "chars" }))
+        const toolSplits = tools.map((t) => SplitText.create(t, { type: "chars", aria: "none" }))
         const arrive = gsap.timeline({
           scrollTrigger: {
             trigger: panel,
@@ -223,6 +223,7 @@ export function StackSection() {
 
   return (
     <section id="stack" ref={sectionRef} className="relative h-screen w-full overflow-hidden border-t border-border">
+      <h2 className="sr-only">Tech stack: the languages, frameworks and tools I use</h2>
       <div ref={trackRef} className="relative z-10 flex h-full w-max will-change-transform">
         {/* Intro panel */}
         <div data-panel className="flex h-screen w-screen shrink-0 flex-col justify-center px-6 md:px-16 lg:px-24">
