@@ -2,10 +2,22 @@
 
 import { useState, useEffect } from "react"
 import { HeroSection } from "../components/hero-section"
+import { AboutSection } from "../components/about-section"
+import { StackSection } from "../components/stack-section"
+import { ProjectsSection } from "../components/projects-section"
+import { ExperienceSection } from "../components/experience-section"
+import { ContactSection } from "../components/contact-section"
+import { SectionStack } from "../components/section-stack"
+import { TravellerCanvas } from "../components/traveller-canvas"
+import { traveller } from "../lib/traveller-store"
 import { Footer } from "../components/footer"
 import { LoadingScreen } from "../components/loading-screen"
 import { useKonamiCode } from "../hooks/use-konami-code"
 import { displayConsoleMessage } from "../lib/console-message"
+
+const FLY_OUT = [true, false, false, false, false, false]
+// Stack slides up under About, which flies out from inside its own pin
+const PULL_UP = [false, false, false, true, false, false]
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -16,6 +28,11 @@ export default function Home() {
     setIsLoading(false)
     setTimeout(() => setShowContent(true), 100)
   }
+
+  // The shared 3D layer waits for the loading screen to finish
+  useEffect(() => {
+    traveller.ready = showContent ? 1 : 0
+  }, [showContent])
 
   // Display console message on mount
   useEffect(() => {
@@ -61,10 +78,19 @@ export default function Home() {
         className={`relative min-h-screen transition-opacity duration-700 ${showContent ? "opacity-100" : "opacity-0"}`}
       >
 
-        <main className="mx-auto max-w-6xl px-6 lg:px-12">
-          <HeroSection />
+        <main>
+          {/* Order: Hero, Works, About, Stack, Career, Connect. Hero flies out into Works (which has its own pinned card deck); About flies out into Stack from inside its own pin */}
+          <SectionStack flyOut={FLY_OUT} pullUp={PULL_UP}>
+            <HeroSection ready={showContent} />
+            <ProjectsSection />
+            <AboutSection />
+            <StackSection />
+            <ExperienceSection />
+            <ContactSection />
+          </SectionStack>
         </main>
         <Footer />
+        <TravellerCanvas />
       </div>
 
       <style jsx global>{`

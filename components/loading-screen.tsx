@@ -1,39 +1,30 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useCallback } from "react"
+import { BackspaceText } from "./ui/backspace-text"
+
+// A slip on purpose: "Yinak" is typed, noticed and fixed, then the line is rewritten and finally replaced
+const LINES = ["Hello, I'm Yinak.", "Hello, I'm Yinka.", "Hello, I build for the web.", "Come on in, let's make something."]
 
 export function LoadingScreen({ onLoadingComplete }: { onLoadingComplete: () => void }) {
-  const [progress, setProgress] = useState(0)
-
-  useEffect(() => {
-    const progressInterval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(progressInterval)
-          // Add a tiny delay so the user sees "100" before it disappears
-          setTimeout(onLoadingComplete, 400)
-          return 100
-        }
-        // Increment randomly between 2 and 15
-        return prev + Math.floor(Math.random() * 14) + 2
-      })
-    }, 80)
-
-    return () => {
-      clearInterval(progressInterval)
-    }
+  // Hold the finished line for a beat so it can be read, then hand over
+  const handleComplete = useCallback(() => {
+    setTimeout(onLoadingComplete, 700)
   }, [onLoadingComplete])
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background">
-      <div className="relative z-10 flex items-baseline gap-2">
-        <span className="text-[30vw] md:text-[20rem] font-bold tracking-tighter tabular-nums leading-none bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800 dark:from-gray-600 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent">
-          {Math.min(progress, 100)}
-        </span>
-        <span className="text-4xl md:text-6xl font-bold bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800 dark:from-gray-600 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent opacity-50 mb-4 md:mb-12">
-          %
-        </span>
-      </div>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background px-6">
+      <h1 className="w-full max-w-4xl text-left text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-7xl">
+        <BackspaceText
+          text={LINES}
+          loop={false}
+          speed={42}
+          deleteSpeed={32}
+          pause={420}
+          delay={250}
+          onComplete={handleComplete}
+        />
+      </h1>
     </div>
   )
 }

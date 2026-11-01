@@ -255,3 +255,51 @@
 .animate-scale-pulse {
   animation: scale-pulse 2s ease-in-out infinite;
 }
+/* Wensity keyframes (infinite-marquee, morphing-shape-background) */
+@keyframes wensity-marquee-x {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes wensity-marquee-x-reverse {
+  from { transform: translate3d(-50%, 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes wensity-morph-rot-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes wensity-morph-rot-ccw {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Full-page layout: anchored sections clear the fixed nav */
+html { scroll-padding-top: 0; }
+section[id] { scroll-margin-top: 0; }
+
+/* Backspace Text caret: blinks once a second, holds still with reduced motion */
+@keyframes backspace-caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.backspace-caret {
+  animation: backspace-caret-blink 1s steps(1, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backspace-caret {
+    animation: none;
+  }
+}
+
+/* While a section flies out (SectionStack), freeze its animations so the
+   transform stays on the GPU instead of repainting blurred blobs each frame */
+.is-flying *,
+.is-flying *::before,
+.is-flying *::after {
+  animation-play-state: paused !important;
+}

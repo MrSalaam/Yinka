@@ -13,10 +13,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <title>Yinka Salaam | Frontend Developer</title>
+        <title>Yinka Salaam | Software Engineer</title>
         <meta
           name="description"
-          content="Frontend developer specializing in React, TypeScript, and building beautiful, performant web experiences."
+          content="Software engineer building complete web products, from polished interfaces to APIs and databases, with Next.js, React, TypeScript, Node.js and PostgreSQL."
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -28,7 +28,7 @@ export default function RootLayout({
 
       </head>
       <body className="font-sans antialiased">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" enableSystem={false}>
           <Nav />
           <SmoothScroll>
             {children}

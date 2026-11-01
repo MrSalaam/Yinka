@@ -8,7 +8,7 @@
   },
   {
     "company": "RAJ Consulting",
-    "role": "Frontend Developer Intern",
+    "role": "Frontend Developer",
     "period": "2025",
     "location": "REMOTE",
     "description": "Orchestrating the digital identity for premium clients, delivering high-fidelity interfaces with improvement in performance metrics."
@@ -19,13 +19,6 @@
     "period": "2025 — 2026",
     "location": "REMOTE",
     "description": "Leading the architectural evolution of core dashboard systems, focusing on atomic design principles and performance optimization at scale."
-  },
-  {
-    "company": "MentorMatch",
-    "role": "Full-Stack Developer",
-    "period": "2025 — 2026",
-    "location": "REMOTE",
-    "description": "Built a full-stack platform that connects students with mentors — designed and developed the matching algorithm interface, onboarding flows, mentorship dashboards, backend API, and database end to end."
   },
   {
     "company": "Freelance",
@@ -40,6 +33,12 @@
     "period": "2026",
     "location": "Remote",
     "description": "Designed and developed a full-stack consultation website with an admin dashboard — built the backend API, database, and a clean interface for managing bookings and client interactions."
+  },
+  {
+    "company": "FaceTrust AI",
+    "role": "Frontend Engineer",
+    "period": "2026",
+    "description": "Frontend engineering at FaceTrust AI, a face-first identity verification platform for Nigeria that links a NIN or BVN registry identity to a live face and identifies people 1:N in under a second."
   },
   {
     "company": "Basal Labs",
