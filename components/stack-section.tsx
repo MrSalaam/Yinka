@@ -164,27 +164,36 @@ export function StackSection() {
         const rule = panel.querySelector("[data-rule]")
         const tools = gsap.utils.toArray<HTMLElement>("[data-tool]", panel)
 
-        // On arrival: the text sequence (played and reversed by apply, below)
-        const toolSplits = tools.map((t) => SplitText.create(t, { type: "chars", aria: "none" }))
-        const arrive = gsap.timeline({ paused: true })
-        arrive
-          .fromTo(
+        // On arrival: the text sequence (played and reversed by apply, below).
+        // It is built the first time the panel is reached, so the page does not split
+        // every tool name into letters at load.
+        let arrive: gsap.core.Timeline | null = null
+        const build = () => {
+          const toolSplits = tools.map((t) => SplitText.create(t, { type: "chars", aria: "none" }))
+          const tl = gsap.timeline({ paused: true })
+          tl.fromTo(
             name,
             { clipPath: "inset(0 0 100% 0)", yPercent: 30, skewY: 6 },
             { clipPath: "inset(0 0 0% 0)", yPercent: 0, skewY: 0, duration: 0.9, ease: "power4.out" },
             0.05,
-          )
-          .fromTo(rule, { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: "power3.inOut" }, 0.3)
-        toolSplits.forEach((split, i) => {
-          arrive.from(
-            split.chars,
-            { yPercent: 115, rotate: 6, duration: 0.6, ease: "power3.out", stagger: 0.02 },
-            0.3 + i * 0.06,
-          )
-        })
+          ).fromTo(rule, { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: "power3.inOut" }, 0.3)
+          toolSplits.forEach((split, i) => {
+            tl.from(split.chars, { yPercent: 115, rotate: 6, duration: 0.6, ease: "power3.out", stagger: 0.02 }, 0.3 + i * 0.06)
+          })
+          return tl
+        }
+        // Hidden until it plays, so nothing flashes before the sequence is built
+        gsap.set([name, rule], { autoAlpha: 0 })
 
         return {
-          arrive,
+          play: () => {
+            if (!arrive) {
+              gsap.set([name, rule], { autoAlpha: 1 })
+              arrive = build()
+            }
+            arrive.play()
+          },
+          reverse: () => arrive?.reverse(),
           arrived: false,
           setNameX: gsap.quickSetter(name as Element, "x", "px") as (v: number) => void,
           setOpacity: gsap.quickSetter(panel, "opacity") as (v: number) => void,
@@ -204,8 +213,8 @@ export function StackSection() {
           const arrived = left < 0.7 * vw
           if (arrived !== g.arrived) {
             g.arrived = arrived
-            if (arrived) g.arrive.play()
-            else g.arrive.reverse()
+            if (arrived) g.play()
+            else g.reverse()
           }
         })
       }

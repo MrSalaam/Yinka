@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
+import { setupWhenNear } from "@/lib/when-near"
 import { NewTwitterIcon, GithubIcon, InstagramIcon, Linkedin02Icon, ArrowUp01Icon } from "hugeicons-react"
 
 const socialLinks = [
@@ -21,7 +22,9 @@ export function Footer() {
   useEffect(() => {
     if (!footerRef.current) return
     gsap.registerPlugin(ScrollTrigger, SplitText)
-    const mm = gsap.matchMedia()
+    let mm: gsap.MatchMedia
+    const stop = setupWhenNear(footerRef.current, () => {
+    mm = gsap.matchMedia()
 
     mm.add("(prefers-reduced-motion: no-preference)", () => {
       const ctx = gsap.context(() => {
@@ -40,6 +43,9 @@ export function Footer() {
     })
 
     return () => mm.revert()
+    })
+
+    return stop
   }, [])
 
   return (

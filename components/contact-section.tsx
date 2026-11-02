@@ -1,6 +1,7 @@
 "use client"
 
 import { site } from "@/lib/site"
+import { setupWhenNear } from "@/lib/when-near"
 import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -89,6 +90,7 @@ export function ContactSection() {
     gsap.registerPlugin(ScrollTrigger, SplitText)
     const section = sectionRef.current
 
+    return setupWhenNear(section, () => {
     const ctx = gsap.context(() => {
       const kicker = section.querySelector("[data-kicker]")
       const lines = gsap.utils.toArray<HTMLElement>("[data-line]", section)
@@ -133,6 +135,7 @@ export function ContactSection() {
     }, section)
 
     return () => ctx.revert()
+    })
   }, [reduced])
 
   /* ── The particle field (Three.js, loaded on demand) ────────────────────── */

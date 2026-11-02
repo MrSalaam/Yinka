@@ -28,3 +28,19 @@ export function whenIdle(timeout = 2500): Promise<void> {
     else setTimeout(resolve, Math.min(timeout, 1200))
   })
 }
+
+/**
+ * Runs `setup` once `el` is near the viewport and returns a cleanup that is safe to call at any time.
+ * Used for text effects below the fold, so their DOM splitting does not compete with the first paint.
+ */
+export function setupWhenNear(el: Element | null, setup: () => (() => void) | void, margin = "200% 0px"): () => void {
+  let disposed = false
+  let cleanup: (() => void) | void
+  whenNear(el, margin).then(() => {
+    if (!disposed) cleanup = setup()
+  })
+  return () => {
+    disposed = true
+    if (cleanup) cleanup()
+  }
+}
