@@ -16,7 +16,7 @@ const links = [
 const socials = [
   { href: "https://github.com/MrSalaam", label: "GitHub" },
   { href: "https://linkedin.com/in/olayinka-salaam", label: "LinkedIn" },
-  { href: "https://x.com/OlayinkaSZN", label: "Twitter (X)" },
+  { href: "https://x.com/yinka_tsx", label: "Twitter (X)" },
 ]
 
 const EASE = [0.16, 1, 0.3, 1] as const

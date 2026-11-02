@@ -152,11 +152,11 @@ export function ExperienceSection() {
 
       let renderer: InstanceType<typeof THREE.WebGLRenderer>
       try {
-        renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
+        renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false })
       } catch {
         return // No WebGL: the text sequence still plays
       }
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5))
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1 : 1.25))
       renderer.setClearColor(0x000000, 0)
       host.appendChild(renderer.domElement)
       renderer.domElement.style.cssText = "width:100%;height:100%;display:block"
@@ -196,7 +196,7 @@ export function ExperienceSection() {
       scene.add(new THREE.Line(lineGeo, lineMat))
 
       // Dust along the path
-      const dustN = 1600
+      const dustN = 900
       const dust = new Float32Array(dustN * 3)
       for (let i = 0; i < dustN; i++) {
         const p = curve.getPointAt(Math.random())

@@ -185,7 +185,7 @@ export function AboutSection() {
       } catch {
         return // No WebGL: the section still shows its label and progress
       }
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.25))
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 0.9 : 1))
       renderer.setClearColor(0x000000, 0)
       host.appendChild(renderer.domElement)
       renderer.domElement.style.cssText = "width:100%;height:100%;display:block"

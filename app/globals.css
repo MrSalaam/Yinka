@@ -1,6 +1,53 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Fonts are served from this site (public/fonts), not a third-party server, so they never block the first paint */
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi-900.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono-latin.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* While Satoshi loads, a fallback sized to match it, so the text does not jump when it arrives */
+@font-face {
+  font-family: "Satoshi Fallback";
+  src: local("Arial");
+  size-adjust: 101%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
 /* Fixed custom-variant syntax by removing problematic selector */
 
 /* Updated to light theme with white and orange color palette */
@@ -76,7 +123,7 @@
 }
 
 @theme inline {
-  --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Satoshi", "Satoshi Fallback", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "JetBrains Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);

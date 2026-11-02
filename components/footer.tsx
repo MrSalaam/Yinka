@@ -9,7 +9,7 @@ import { NewTwitterIcon, GithubIcon, InstagramIcon, Linkedin02Icon, ArrowUp01Ico
 const socialLinks = [
   { icon: GithubIcon, href: "https://github.com/MrSalaam", label: "GitHub" },
   { icon: InstagramIcon, href: "https://instagram.com/", label: "Instagram" },
-  { icon: NewTwitterIcon, href: "https://x.com/OlayinkaSZN", label: "Twitter" },
+  { icon: NewTwitterIcon, href: "https://x.com/yinka_tsx", label: "Twitter" },
   { icon: Linkedin02Icon, href: "https://linkedin.com/in/olayinka-salaam", label: "LinkedIn" },
 ]
 

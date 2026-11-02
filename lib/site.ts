@@ -1,9 +1,4 @@
-/**
- * One place for everything search engines and social previews need to know.
- *
- * SITE_URL is the real domain. Set NEXT_PUBLIC_SITE_URL to override it (for a preview
- * deployment, say); otherwise it is the production address below.
- */
+
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.yinkacodes.cv").replace(/\/$/, "")
 
 export const site = {
@@ -16,9 +11,9 @@ export const site = {
   description:
     "Olayinka Salaam is a website developer in Lagos, Nigeria. I build fast, modern websites and web apps with Next.js, React and TypeScript, for clients worldwide.",
   email: "olayinkasalaam.dev@gmail.com",
-  twitterHandle: "@OlayinkaSZN",
+  twitterHandle: "@yinka_tsx",
   location: { city: "Lagos", country: "NG", countryName: "Nigeria" },
-  sameAs: ["https://github.com/MrSalaam", "https://linkedin.com/in/olayinka-salaam", "https://x.com/OlayinkaSZN"],
+  sameAs: ["https://github.com/MrSalaam", "https://linkedin.com/in/olayinka-salaam", "https://x.com/yinka_tsx"],
   keywords: [
     "website developer",
     "website developer in Lagos",

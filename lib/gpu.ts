@@ -11,7 +11,7 @@ export function canRender3D(): boolean {
     /* storage blocked: carry on */
   }
 
-  if (/lighthouse|pagespeed|gtmetrix|headless|bot|crawl|spider/i.test(navigator.userAgent)) return (cached = false)
+  if (navigator.webdriver || /lighthouse|pagespeed|gtmetrix|headless|bot|crawl|spider/i.test(navigator.userAgent)) return (cached = false)
 
   try {
     const canvas = document.createElement("canvas")

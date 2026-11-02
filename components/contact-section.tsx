@@ -18,7 +18,7 @@ const EMAIL = "olayinkasalaam.dev@gmail.com"
 
 const SOCIALS = [
   { label: "LinkedIn", href: "https://linkedin.com/in/olayinka-salaam" },
-  { label: "Twitter (X)", href: "https://x.com/OlayinkaSZN" },
+  { label: "Twitter (X)", href: "https://x.com/yinka_tsx" },
   { label: "GitHub", href: "https://github.com/MrSalaam" },
 ]
 
@@ -154,7 +154,7 @@ export function ContactSection() {
       } catch {
         return // No WebGL: the text works on its own
       }
-      const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5)
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1 : 1.25)
       renderer.setPixelRatio(pixelRatio)
       renderer.setClearColor(0x000000, 0)
       host.appendChild(renderer.domElement)

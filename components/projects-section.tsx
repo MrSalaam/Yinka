@@ -517,7 +517,7 @@ export function ProjectsSection() {
       } catch {
         return // No WebGL: the panels still work on their own
       }
-      const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5)
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1 : 1.25)
       renderer.setPixelRatio(pixelRatio)
       renderer.setClearColor(0x000000, 0)
       host.appendChild(renderer.domElement)
@@ -530,7 +530,7 @@ export function ProjectsSection() {
       scene.add(group)
 
       // The cloud: every particle morphs from where it is (aFrom) to its place in the next shape (aTo)
-      const count = window.innerWidth < 768 ? 7000 : 13000
+      const count = window.innerWidth < 768 ? 4500 : 8000
       const rand = rng(11)
       const randAttr = new Float32Array(count)
       for (let i = 0; i < count; i++) randAttr[i] = rand()

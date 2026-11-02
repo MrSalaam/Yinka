@@ -118,8 +118,12 @@ export function StackSection() {
       const bar = section.querySelector<HTMLElement>("[data-progress]")
       const travel = () => track.scrollWidth - window.innerWidth
 
+      // Everything per panel (name drift, fade-out, the text arriving) is worked out from the slide's
+      // progress in this one function, so the section needs two scroll triggers, not twenty.
+      let apply: (progress: number) => void = () => {}
+
       // The pinned sideways slide
-      const slide = gsap.to(track, {
+      gsap.to(track, {
         x: () => -travel(),
         ease: "none",
         scrollTrigger: {
@@ -132,7 +136,9 @@ export function StackSection() {
           onUpdate: (self) => {
             traveller.stackP = self.progress
             if (bar) bar.style.transform = `scaleX(${self.progress})`
+            apply(self.progress)
           },
+          onRefresh: (self) => apply(self.progress),
         },
       })
 
@@ -153,39 +159,14 @@ export function StackSection() {
       const arrow = section.querySelector<HTMLElement>("[data-arrow]")
       if (arrow) gsap.to(arrow, { x: 10, duration: 0.8, repeat: -1, yoyo: true, ease: "sine.inOut" })
 
-      panels.slice(1).forEach((panel) => {
+      const groups = panels.slice(1).map((panel) => {
         const name = panel.querySelector("[data-name]")
         const rule = panel.querySelector("[data-rule]")
         const tools = gsap.utils.toArray<HTMLElement>("[data-tool]", panel)
 
-        // Scroll-linked: the name drifts at its own speed against the slide
-        gsap.fromTo(
-          name,
-          { x: 160 },
-          {
-            x: -160,
-            ease: "none",
-            scrollTrigger: { trigger: panel, containerAnimation: slide, start: "left right", end: "right left", scrub: true },
-          },
-        )
-
-        // Scroll-linked: the whole panel fades as it leaves
-        gsap.to(panel, {
-          opacity: 0.1,
-          ease: "none",
-          scrollTrigger: { trigger: panel, containerAnimation: slide, start: "left left", end: "right left", scrub: true },
-        })
-
-        // On arrival: the text sequence (reverses if you scroll back)
+        // On arrival: the text sequence (played and reversed by apply, below)
         const toolSplits = tools.map((t) => SplitText.create(t, { type: "chars", aria: "none" }))
-        const arrive = gsap.timeline({
-          scrollTrigger: {
-            trigger: panel,
-            containerAnimation: slide,
-            start: "left 70%",
-            toggleActions: "play none none reverse",
-          },
-        })
+        const arrive = gsap.timeline({ paused: true })
         arrive
           .fromTo(
             name,
@@ -201,7 +182,34 @@ export function StackSection() {
             0.3 + i * 0.06,
           )
         })
+
+        return {
+          arrive,
+          arrived: false,
+          setNameX: gsap.quickSetter(name as Element, "x", "px") as (v: number) => void,
+          setOpacity: gsap.quickSetter(panel, "opacity") as (v: number) => void,
+        }
       })
+
+      apply = (progress: number) => {
+        const vw = window.innerWidth
+        const x = -progress * travel() // the track's position (the slide has a linear ease)
+        groups.forEach((g, i) => {
+          const left = (i + 1) * vw + x // this panel's left edge, in the viewport
+          // The name drifts at its own speed against the slide
+          g.setNameX(160 - 320 * Math.min(1, Math.max(0, (vw - left) / (2 * vw))))
+          // The whole panel fades as it leaves
+          g.setOpacity(1 - 0.9 * Math.min(1, Math.max(0, -left / vw)))
+          // The text writes itself in as the panel arrives, and reverses if you scroll back
+          const arrived = left < 0.7 * vw
+          if (arrived !== g.arrived) {
+            g.arrived = arrived
+            if (arrived) g.arrive.play()
+            else g.arrive.reverse()
+          }
+        })
+      }
+      apply(0)
     }, section)
 
     return () => ctx.revert()

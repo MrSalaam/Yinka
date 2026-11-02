@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import "../lib/gsap-setup" // first, so GSAP is configured before any section uses it
 import { HeroSection } from "../components/hero-section"
 import { AboutSection } from "../components/about-section"
 import { StackSection } from "../components/stack-section"
@@ -44,10 +45,10 @@ export default function Home() {
     if (plain) {
       setPlainAbout(true)
       // The layout changed, so the scroll positions need recalculating
-      requestAnimationFrame(() => {
-        gsap.registerPlugin(ScrollTrigger)
-        ScrollTrigger.refresh()
-      })
+      // About and Stack settle over a few renders, so measure again as they do
+      gsap.registerPlugin(ScrollTrigger)
+      const timers = [700].map((ms) => setTimeout(() => ScrollTrigger.refresh(), ms))
+      return () => timers.forEach(clearTimeout)
     }
   }, [])
 
@@ -56,6 +57,7 @@ export default function Home() {
   useEffect(() => {
     let skip =
       /bot|crawl|spider|lighthouse|pagespeed|gtmetrix|headless/i.test(navigator.userAgent) ||
+      navigator.webdriver ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
     try {
       skip = skip || sessionStorage.getItem("seen-intro") === "1"

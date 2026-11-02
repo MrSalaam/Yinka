@@ -113,12 +113,13 @@ export function HeroSection({ ready = true }: { ready?: boolean }) {
               </FadeIn>
             </div>
 
-            <FadeIn delay={0.5}>
+            {/* Plain markup, no fade: this is the largest element on the first screen, so it must not wait for JavaScript */}
+            <div>
               <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 <span className="font-medium text-foreground">I&apos;m Olayinka Salaam, a website developer in Lagos.</span> I build websites and
                 web apps, from the interface people touch to the APIs and database behind it, for teams anywhere.
               </p>
-            </FadeIn>
+            </div>
 
             <FadeIn delay={0.7}>
               <div className="flex flex-col items-start gap-6 pt-2 sm:flex-row sm:items-center">
