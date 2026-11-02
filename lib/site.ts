@@ -13,6 +13,8 @@ export const site = {
   email: "olayinkasalaam.dev@gmail.com",
   twitterHandle: "@yinka_tsx",
   location: { city: "Lagos", country: "NG", countryName: "Nigeria" },
+  // Your CV is public/Olayinka_Salaam CV.pdf, or replace this with a full link such as a Google Drive URL
+  cvUrl: "/Olayinka_Salaam%20CV.pdf",
   sameAs: ["https://github.com/MrSalaam", "https://linkedin.com/in/olayinka-salaam", "https://x.com/yinka_tsx"],
   keywords: [
     "website developer",

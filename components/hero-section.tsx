@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion"
-import { ArrowUpRight01Icon } from "hugeicons-react"
+import { ArrowUpRight01Icon, ArrowDown01Icon } from "hugeicons-react"
+import { site } from "../lib/site"
 import { GlossyButton } from "./ui/glossy-button"
 import { TextReveal } from "./ui/text-reveal"
 import { MagneticEffect } from "./ui/magnetic-effect"
@@ -132,10 +133,11 @@ export function HeroSection({ ready = true }: { ready?: boolean }) {
                   </MagneticEffect>
                 </a>
                 <a
-                  href="#contact"
+                  href={site.cvUrl}
+                  download
                   className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-muted-foreground transition-colors duration-200 hover:text-foreground"
                 >
-                  Hire Me <ArrowUpRight01Icon size={14} />
+                  Download CV <ArrowDown01Icon size={14} />
                 </a>
               </div>
             </FadeIn>

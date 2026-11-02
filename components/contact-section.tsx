@@ -1,5 +1,6 @@
 "use client"
 
+import { site } from "@/lib/site"
 import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -17,6 +18,7 @@ import { canRender3D } from "@/lib/gpu"
 const EMAIL = "olayinkasalaam.dev@gmail.com"
 
 const SOCIALS = [
+  { label: "Download CV", href: site.cvUrl },
   { label: "LinkedIn", href: "https://linkedin.com/in/olayinka-salaam" },
   { label: "Twitter (X)", href: "https://x.com/yinka_tsx" },
   { label: "GitHub", href: "https://github.com/MrSalaam" },

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import { site } from "@/lib/site"
 
 const links = [
   { href: "#home", label: "Home" },
@@ -14,6 +15,7 @@ const links = [
 ]
 
 const socials = [
+  { href: site.cvUrl, label: "Download CV" },
   { href: "https://github.com/MrSalaam", label: "GitHub" },
   { href: "https://linkedin.com/in/olayinka-salaam", label: "LinkedIn" },
   { href: "https://x.com/yinka_tsx", label: "Twitter (X)" },

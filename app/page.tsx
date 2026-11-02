@@ -11,7 +11,6 @@ import { ContactSection } from "../components/contact-section"
 import { SectionStack } from "../components/section-stack"
 import { TravellerCanvas } from "../components/traveller-canvas"
 import { traveller } from "../lib/traveller-store"
-import { canRender3D } from "../lib/gpu"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Footer } from "../components/footer"
@@ -41,7 +40,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    const plain = window.matchMedia("(prefers-reduced-motion: reduce)").matches || !canRender3D()
+    const plain = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     if (plain) {
       setPlainAbout(true)
       // The layout changed, so the scroll positions need recalculating
