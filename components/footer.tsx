@@ -3,92 +3,53 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { SplitText } from "gsap/SplitText"
-import { setupWhenNear } from "@/lib/when-near"
-import { NewTwitterIcon, GithubIcon, InstagramIcon, Linkedin02Icon, ArrowUp01Icon } from "hugeicons-react"
+import { afterIntro } from "@/lib/intro-gate"
 
-const socialLinks = [
-  { icon: GithubIcon, href: "https://github.com/MrSalaam", label: "GitHub" },
-  { icon: InstagramIcon, href: "https://instagram.com/", label: "Instagram" },
-  { icon: NewTwitterIcon, href: "https://x.com/yinka_tsx", label: "Twitter" },
-  { icon: Linkedin02Icon, href: "https://linkedin.com/in/olayinka-salaam", label: "LinkedIn" },
-]
-
-/* The footer continues Connect's dark finale: a huge outlined wordmark whose
-   letters rise as it scrolls into view. */
+/* Footer, minimal: a thin bar, and the name set enormous in the palest grey across the bottom, like a watermark.
+ * It rises into place once as the footer comes into view. */
 export function Footer() {
   const footerRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    if (!footerRef.current) return
-    gsap.registerPlugin(ScrollTrigger, SplitText)
-    let mm: gsap.MatchMedia
-    const stop = setupWhenNear(footerRef.current, () => {
-    mm = gsap.matchMedia()
+    const footer = footerRef.current
+    if (!footer || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+    gsap.registerPlugin(ScrollTrigger)
 
-    mm.add("(prefers-reduced-motion: no-preference)", () => {
+    return afterIntro(() => {
       const ctx = gsap.context(() => {
-        const word = footerRef.current!.querySelector<HTMLElement>("[data-wordmark]")
-        const bar = gsap.utils.toArray<HTMLElement>("[data-bar]", footerRef.current)
-        if (!word) return
-        const chars = SplitText.create(word, { type: "chars", aria: "none" }).chars
-        gsap.set(chars, { yPercent: 110 })
-        gsap.set(bar, { autoAlpha: 0, y: 16 })
-        gsap
-          .timeline({ scrollTrigger: { trigger: footerRef.current, start: "top 85%", toggleActions: "play none none reverse" } })
-          .to(chars, { yPercent: 0, duration: 0.9, ease: "power4.out", stagger: 0.03 }, 0)
-          .to(bar, { autoAlpha: 1, y: 0, duration: 0.6, ease: "power2.out", stagger: 0.08 }, 0.5)
-      }, footerRef)
+        const mark = footer.querySelector("[data-mark]")
+        gsap.set(mark, { yPercent: 45, opacity: 0 })
+        gsap.to(mark, {
+          yPercent: 0,
+          opacity: 1,
+          duration: 1.3,
+          ease: "power4.out",
+          scrollTrigger: { trigger: footer, start: "top 85%", once: true },
+        })
+      }, footer)
       return () => ctx.revert()
     })
-
-    return () => mm.revert()
-    })
-
-    return stop
   }, [])
 
   return (
-    <footer ref={footerRef} className="overflow-hidden bg-[#0a0a0a] px-6 pb-8 pt-4 text-white md:px-16 lg:px-24">
-      {/* The wordmark: outlined, so it reads as a quiet signature */}
-      <div role="img" className="overflow-hidden pb-[0.04em]" aria-label="Olayinka Salaam">
+    <footer ref={footerRef} className="relative overflow-hidden bg-white px-6 pt-4 lg:px-12">
+      <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 border-t border-border pt-5 text-sm text-muted-foreground sm:flex-row sm:items-center">
+        <p>© {new Date().getFullYear()} Olayinka Salaam</p>
+        <p>Website developer, Lagos</p>
+        <a href="#home" className="underline decoration-transparent underline-offset-[6px] transition-[color,text-decoration-color] duration-200 hover:text-foreground hover:decoration-foreground">
+          Back to top
+        </a>
+      </div>
+
+      {/* The watermark: sized to the width of the page, set in the palest grey, and cropped by the bottom edge */}
+      <div role="img" aria-label="Olayinka Salaam" className="mx-auto mt-10 max-w-[100vw] overflow-hidden pb-[0.06em]">
         <p
-          data-wordmark
+          data-mark
           aria-hidden="true"
-          className="whitespace-nowrap text-center text-[clamp(2.5rem,9.5vw,10rem)] font-bold uppercase leading-[0.9] tracking-tighter text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.28)]"
+          className="whitespace-nowrap text-center text-[clamp(3rem,12.4vw,17rem)] font-bold leading-[0.82] tracking-tighter text-[#f0f0ee]"
         >
           Olayinka Salaam
         </p>
-      </div>
-
-      <div className="mt-8 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-6 md:flex-row">
-        <p data-bar className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/50">
-          © {new Date().getFullYear()} Olayinka Salaam
-        </p>
-
-        <div data-bar className="flex items-center gap-6">
-          {socialLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/50 transition-colors duration-150 hover:text-white"
-              aria-label={link.label}
-            >
-              <link.icon className="h-5 w-5" />
-            </a>
-          ))}
-        </div>
-
-        <a
-          data-bar
-          href="#home"
-          className="group inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.25em] text-white/50 transition-colors duration-150 hover:text-white"
-        >
-          Back to top
-          <ArrowUp01Icon size={14} className="transition-transform duration-200 group-hover:-translate-y-0.5" />
-        </a>
       </div>
     </footer>
   )

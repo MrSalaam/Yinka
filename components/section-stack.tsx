@@ -31,6 +31,8 @@ export function SectionStack({
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
+    // Not delayed: pinning moves the hero into a wrapper element, and that must happen before its entrance
+    // animation starts, or the move would restart the animation
     const mm = gsap.matchMedia()
 
     mm.add("(prefers-reduced-motion: no-preference)", () => {
@@ -53,7 +55,7 @@ export function SectionStack({
               // Freeze the panel's own animations (blobs, marquee) once it starts
               // flying out: repainting them every frame is what makes it stutter
               onUpdate: (self) => {
-                panel.classList.toggle("is-flying", self.progress > 0)
+                panel.classList.toggle("is-flying", self.progress > 0.01)
                 if (i === 0) traveller.heroFly = self.progress
               },
             },

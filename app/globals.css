@@ -350,3 +350,27 @@ section[id] { scroll-margin-top: 0; }
 .is-flying *::after {
   animation-play-state: paused !important;
 }
+
+/* Splitting Text: each character/word/line slides in (see components/ui/splitting-text.tsx) */
+@theme inline {
+  --animate-splitting-text: splitting-text var(--splitting-text-duration, 700ms) cubic-bezier(0.22, 1, 0.36, 1) calc(var(--splitting-text-delay, 0ms) + var(--splitting-text-index, 0) * var(--splitting-text-stagger, 50ms)) both;
+}
+
+@keyframes splitting-text {
+  from { filter: var(--splitting-text-filter, none); opacity: 0; translate: calc(var(--splitting-text-dx, 0) * var(--splitting-text-distance, 1.5em)) calc(var(--splitting-text-dy, 0) * var(--splitting-text-distance, 1.5em)); }
+}
+
+/* Hero: everything after the headline fades up in turn (delay set per element with --d) */
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(10px); }
+}
+.hero-in {
+  animation: hero-in 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-in { animation: none; }
+}
+
+/* The hero's entrance waits for [data-go] (set once the page is interactive) */
+.hero-in { animation-play-state: paused; }
+[data-go] .hero-in { animation-play-state: running; }

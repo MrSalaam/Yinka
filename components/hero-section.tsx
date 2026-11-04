@@ -1,159 +1,123 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion"
-import { ArrowUpRight01Icon, ArrowDown01Icon } from "hugeicons-react"
-import { site } from "../lib/site"
-import { GlossyButton } from "./ui/glossy-button"
-import { TextReveal } from "./ui/text-reveal"
-import { MagneticEffect } from "./ui/magnetic-effect"
-import { FadeIn } from "./ui/fade-in"
-import { RotatingText } from "./ui/rotating-text"
+import { useEffect, useState } from "react"
+import { SplittingText } from "./ui/splitting-text"
+import { Download04Icon } from "hugeicons-react"
 import { InfiniteMarquee } from "./wensity/infinite-marquee"
 import companyData from "../data/companies.json"
+import { site } from "../lib/site"
 
-const headline = "text-[8vw] sm:text-6xl lg:text-7xl xl:text-8xl uppercase font-bold tracking-tighter leading-[0.9] bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800 dark:from-gray-600 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent"
+/* Minimal hero: one statement, a button, a quiet line of names that drifts sideways.
+ * No blobs, no 3D. The only motion is the "Trusted by" line and the button's hover. */
 
-// Greetings loop forever, starting close to home
-const greetings = [
-  { text: "Báwo ni", lang: "YO" },
-  { text: "Ndewo", lang: "IG" },
-  { text: "Sannu", lang: "HA" },
-  { text: "Hola", lang: "ES" },
-  { text: "Bonjour", lang: "FR" },
-  { text: "こんにちは", lang: "JA" },
-  { text: "Hello", lang: "EN" },
-]
-
-function GreetingLine({ ready }: { ready: boolean }) {
-  const reduced = useReducedMotion()
-  const [index, setIndex] = useState(0)
-  const last = greetings.length - 1
-
-  useEffect(() => {
-    if (!ready) return
-    if (reduced) {
-      setIndex(last)
-      return
-    }
-    // Keep cycling through the list for as long as the page is open
-    const id = setInterval(() => setIndex((i) => (i + 1) % greetings.length), 1500)
-    return () => clearInterval(id)
-  }, [ready, reduced, last])
-
-  const g = greetings[index]
-
-  return (
-    <div className="h-7 overflow-hidden" aria-hidden="true">
-      <AnimatePresence mode="popLayout" initial={false}>
-        {ready && (
-          <motion.p
-            key={index}
-            aria-hidden="true"
-            initial={reduced ? { opacity: 0 } : { opacity: 0, y: 10, filter: "blur(6px)" }}
-            animate={reduced ? { opacity: 1 } : { opacity: 1, y: 0, filter: "blur(0px)" }}
-            exit={reduced ? { opacity: 0 } : { opacity: 0, y: -10, filter: "blur(6px)" }}
-            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="flex items-center gap-3 text-lg font-medium tracking-tight text-foreground"
-          >
-            <span className="rounded-full border border-border px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.25em] text-muted-foreground">
-              {g.lang}
-            </span>
-            {g.text}
-          </motion.p>
-        )}
-      </AnimatePresence>
-    </div>
-  )
-}
-
-// Finishes the sentence "I build ..."; the word rolls through these
-const rotating = ["The Whole Thing.", "Fast Interfaces.", "Solid APIs."]
-
-// Repeated so one copy is always wider than the screen and the loop never shows a gap
+// Repeated so one copy is always wider than its strip and the loop never shows a gap
 const names = companyData.companies.map((c) => c.name)
 const marqueeItems = [...names, ...names].map((name, i) => (
-  <span key={`${name}-${i}`} className="whitespace-nowrap text-sm font-bold uppercase tracking-[0.3em] text-foreground/60 md:text-base">
+  <span key={`${name}-${i}`} className="whitespace-nowrap text-sm text-foreground/70">
     {name}
   </span>
 ))
 
-export function HeroSection({ ready = true }: { ready?: boolean }) {
-  const rootRef = useRef<HTMLDivElement>(null)
+const linkClass =
+  "text-sm font-medium text-foreground underline decoration-foreground/30 underline-offset-[6px] transition-[text-decoration-color] duration-200 hover:decoration-foreground"
 
-  // The blurred blobs and the marquee loop forever; stop them once the hero is off screen
+export function HeroSection() {
+  // The entrance starts once the page is interactive, so it never plays while the browser is busy starting up
+  const [go, setGo] = useState(false)
+  // Once the entrance has finished the animated markup is swapped for plain text. Any later change to the
+  // page structure (the scroll setup wraps sections in new elements) would otherwise replay the entrance.
+  const [settled, setSettled] = useState(false)
   useEffect(() => {
-    const el = rootRef.current
-    if (!el) return
-    const io = new IntersectionObserver(([entry]) => el.classList.toggle("is-flying", !entry.isIntersecting))
-    io.observe(el)
-    return () => io.disconnect()
+    const id = requestAnimationFrame(() => setGo(true))
+    const done = setTimeout(() => setSettled(true), 3300)
+    return () => {
+      cancelAnimationFrame(id)
+      clearTimeout(done)
+    }
   }, [])
+  const enter = settled ? "" : "hero-in"
 
   return (
-    <div ref={rootRef}>
-    <div className="relative isolate min-h-screen w-full overflow-hidden bg-[radial-gradient(ellipse_70%_60%_at_20%_30%,rgba(0,0,0,0.05),transparent),radial-gradient(ellipse_60%_55%_at_80%_70%,rgba(0,0,0,0.06),transparent)]">
-      <section id="home" className="relative flex min-h-screen flex-col justify-center px-6 pb-28 pt-28 lg:px-12">
-        <h1 className="sr-only">Olayinka Salaam, website developer in Lagos, Nigeria. I build the whole thing: fast websites, solid APIs and the database underneath.</h1>
-        <div className="mx-auto w-full max-w-7xl">
-          {/* Left: positioning */}
-          <div className="flex flex-col items-start gap-8">
-            <GreetingLine ready={ready} />
+    <div data-go={go ? "" : undefined} className="relative min-h-screen w-full bg-white">
+      <section id="home" className="relative flex min-h-screen flex-col justify-between px-6 pb-8 pt-32 lg:px-12">
+        <h1 className="sr-only">
+          Olayinka Salaam, website developer in Lagos, Nigeria. I build the whole thing: fast websites, solid APIs and the database underneath.
+        </h1>
 
-            <div>
-              <TextReveal text="I Build" textClassName={headline} className="max-w-none" />
-              <FadeIn delay={0.3}>
-                <div className="-mt-2 text-[8vw] font-bold uppercase leading-[0.9] tracking-tighter text-foreground sm:text-6xl lg:text-7xl xl:text-8xl">
-                  {/* Start rolling only once the loading screen is gone */}
-                  {ready ? (
-                    <RotatingText texts={rotating} duration={2200} />
-                  ) : (
-                    <span className="invisible">{rotating[0]}</span>
-                  )}
-                </div>
-              </FadeIn>
-            </div>
+        <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center gap-10">
+          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground" aria-hidden="true">
+            hey
+          </p>
 
-            {/* Plain markup, no fade: this is the largest element on the first screen, so it must not wait for JavaScript */}
-            <div>
-              <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                <span className="font-medium text-foreground">I&apos;m Olayinka Salaam, a website developer in Lagos.</span> I build websites and
-                web apps, from the interface people touch to the APIs and database behind it, for teams anywhere.
-              </p>
-            </div>
+          <div aria-hidden="true">
+            {/* Plain markup, no fade: it is the largest element on the first screen, so it must not wait for JavaScript */}
+            <p className="max-w-[20ch] text-[clamp(2.2rem,5.6vw,5rem)] font-medium leading-[1.04] tracking-tighter text-foreground">
+              {settled ? (
+                "I build websites and web apps, end to end."
+              ) : (
+                <SplittingText text="I build websites and web apps, end to end." direction="bottom" trigger="view" stagger={18} duration={650} className="[--splitting-text-distance:0.5em]" />
+              )}
+            </p>
 
-            <FadeIn delay={0.7}>
-              <div className="flex flex-col items-start gap-6 pt-2 sm:flex-row sm:items-center">
-                <a href="#works">
-                  <MagneticEffect>
-                    <GlossyButton className="flex items-center gap-2">
-                      <span>View My Work</span>
-                      <ArrowUpRight01Icon size={18} />
-                    </GlossyButton>
-                  </MagneticEffect>
-                </a>
-                <a
-                  href={site.cvUrl}
-                  download
-                  className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-muted-foreground transition-colors duration-200 hover:text-foreground"
-                >
-                  Download CV <ArrowDown01Icon size={14} />
-                </a>
-              </div>
-            </FadeIn>
+            {/* A correction: "fullstack developer" is crossed out and "web developer" is written over it, slanted */}
+            <p style={{ "--d": "1500ms" } as React.CSSProperties} className={`${enter} relative mt-12 inline-block text-[clamp(1.1rem,2.6vw,1.75rem)] tracking-tight text-muted-foreground`}>
+              <span className="font-medium text-foreground">
+                Olayinka Salaam
+              </span>{" "}
+              <span className="relative ml-1 inline-block">
+                <span className="relative">
+                  fullstack developer
+                  <span className="absolute left-[-2%] top-[56%] h-[2px] w-[104%] -rotate-[2deg] bg-foreground" />
+                </span>
+                <span className="absolute -top-[1.7em] left-[14%] -rotate-[7deg] whitespace-nowrap font-mono text-[0.72em] font-bold uppercase tracking-[0.12em] text-foreground">
+                  web developer
+                </span>
+              </span>
+            </p>
+          </div>
+
+          <div style={{ "--d": "1800ms" } as React.CSSProperties} className={`${enter} flex flex-wrap items-center gap-8`}>
+            <a
+              href="#works"
+              className="group relative isolate inline-flex h-14 items-center overflow-hidden rounded-full border border-foreground bg-white pl-7 pr-2 text-sm font-medium"
+            >
+              {/* The fill grows out of the arrow disc: a big black circle that scales up from it */}
+              <span
+                aria-hidden="true"
+                className="absolute left-[calc(100%-1.75rem)] top-1/2 z-0 -ml-60 -mt-60 h-[30rem] w-[30rem] scale-0 rounded-full bg-foreground transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-100 group-focus-visible:scale-100"
+              />
+              {/* Label rolls up as the copy underneath takes its place */}
+              <span className="relative z-10 block h-5 overflow-hidden text-white mix-blend-difference">
+                <span className="block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-5 group-focus-visible:-translate-y-5">
+                  <span className="block h-5 leading-5">View work</span>
+                  <span aria-hidden="true" className="block h-5 leading-5">
+                    View work
+                  </span>
+                </span>
+              </span>
+              <span className="relative z-10 ml-6 grid h-10 w-10 place-items-center rounded-full border border-white/70 text-white mix-blend-difference">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" className="transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:rotate-45">
+                  <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+            </a>
+            <a href={site.cvUrl} download className={`${linkClass} group/cv inline-flex items-center gap-2`}>
+              Download CV
+              <Download04Icon size={16} className="transition-transform duration-300 group-hover/cv:translate-y-0.5" />
+            </a>
           </div>
         </div>
 
-        <div className="absolute inset-x-0 bottom-0 z-10 flex items-center border-t border-border">
-          <p className="shrink-0 border-r border-border px-6 py-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground lg:px-12">
-            {companyData.heading}
-          </p>
-          <div className="min-w-0 flex-1 py-5">
-            <InfiniteMarquee items={marqueeItems} speed={40} gap="gap-16" />
+        <div style={{ "--d": "2100ms" } as React.CSSProperties} className={`${enter} mx-auto flex w-full max-w-7xl items-center border-t border-border pt-5`}>
+          <p className="shrink-0 pr-6 font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">{companyData.heading}</p>
+          <div
+            className="min-w-0 flex-1 overflow-hidden"
+            style={{ maskImage: "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)" }}
+          >
+            <InfiniteMarquee items={marqueeItems} speed={40} gap="gap-12" />
           </div>
         </div>
       </section>
-    </div>
     </div>
   )
 }

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
+import { afterIntro } from "@/lib/intro-gate"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { traveller } from "@/lib/traveller-store"
 import { SplitText } from "gsap/SplitText"
@@ -113,6 +114,7 @@ export function StackSection() {
     const section = sectionRef.current
     const track = trackRef.current
 
+    return afterIntro(() => {
     const ctx = gsap.context(() => {
       const panels = gsap.utils.toArray<HTMLElement>("[data-panel]", track)
       const bar = section.querySelector<HTMLElement>("[data-progress]")
@@ -222,6 +224,7 @@ export function StackSection() {
     }, section)
 
     return () => ctx.revert()
+    })
   }, [reduced])
 
   /* Reduced motion: no pin, no sideways slide. Panels simply stack. */

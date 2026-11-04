@@ -1,5 +1,6 @@
 
 import gsap from "gsap"
+import { afterIntro } from "./intro-gate"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
 
@@ -12,5 +13,5 @@ if (typeof window !== "undefined") {
     if (document.readyState === "complete") resolve()
     else window.addEventListener("load", () => resolve(), { once: true })
   })
-  Promise.all([loaded, document.fonts ? document.fonts.ready : Promise.resolve()]).then(() => setTimeout(() => ScrollTrigger.refresh(), 300))
+  Promise.all([loaded, document.fonts ? document.fonts.ready : Promise.resolve()]).then(() => afterIntro(() => { setTimeout(() => ScrollTrigger.refresh(), 300) }))
 }
